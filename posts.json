@@ -102,7 +102,7 @@
       "type": "carousel",
       "src": "studio/carousels/12-sujeo",
       "day": null,
-      "reviewed": false,
+      "reviewed": true,
       "title": "수저 (숟가락·젓가락)",
       "category": "yemek"
     }
