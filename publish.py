@@ -163,7 +163,14 @@ class Api:
     def __init__(self):
         self.user = os.environ["IG_USER_ID"]
         self.token = os.environ["IG_ACCESS_TOKEN"]
-        self.host = os.environ.get("IG_API_HOST", "graph.instagram.com")
+        # Instagram-login tokens start with "IG" and only work on graph.instagram.com;
+        # Facebook-login / system-user tokens (EAA…) only work on graph.facebook.com.
+        if self.token.startswith("IG"):
+            self.host = "graph.instagram.com"
+        elif self.token.startswith("EAA"):
+            self.host = "graph.facebook.com"
+        else:
+            self.host = os.environ.get("IG_API_HOST") or "graph.instagram.com"
         self.version = os.environ.get("IG_API_VERSION", "v23.0")
         self.base = f"https://{self.host}/{self.version}"
 

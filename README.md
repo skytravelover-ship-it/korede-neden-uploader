@@ -50,7 +50,7 @@ GitHub Actions가 30분마다 확인하므로 Mac이 꺼져 있어도 올라갑�
    - 공개여야 하는 이유: 인스타 API는 이미지를 공개 URL에서 가져갑니다. 그래서 게시 전 이미지가 저장소에서 보일 수 있습니다.
    - Settings → Secrets and variables → Actions:
      - Secrets: `IG_USER_ID`, `IG_ACCESS_TOKEN`
-     - Variables: `IG_API_HOST` = `graph.facebook.com` (시스템 사용자 토큰일 때)
+     - API 주소는 토큰 종류(IG… / EAA…)를 보고 자동으로 정합니다
 4. **런칭일 넣기:** `posts.json`의 `"launch_date": null`을 `"launch_date": "2026-11-09"`처럼 바꿉니다.
    - 이 단계까지 해도 `reviewed`가 false인 게시물은 올라가지 않습니다.
    - Actions 탭에서 "Run workflow"로 한 번 돌려 오류가 없는지 확인합니다.
