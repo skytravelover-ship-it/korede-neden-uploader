@@ -34,10 +34,10 @@ jobs:
         run: python3 publish.py ${{ inputs.verify && '--verify' || '' }}
       - name: Save state
         run: |
-          if [ -n "$(git status --porcelain state.json)" ]; then
+          if [ -n "$(git status --porcelain state.json stats.json)" ]; then
             git config user.name "instagram-bot"
             git config user.email "instagram-bot@users.noreply.github.com"
-            git add state.json
-            git commit -m "Record published posts"
+            git add state.json $(ls stats.json 2>/dev/null)
+            git commit -m "Record published posts and reactions"
             git push
           fi

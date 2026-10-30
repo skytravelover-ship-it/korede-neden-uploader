@@ -1,7 +1,21 @@
 {
   "launch_date": "2026-10-30",
   "timezone_utc_offset": "+03:00",
-  "note": "런칭 2026-10-30(금). 캐러셀만 월·금 터키 시간 20:00 (11/23까지 8개). 릴스는 보류(2026-10-30 Jong 결정).",
+  "note": "날짜 지정 게시물은 11/23까지. 그 뒤로는 재고(day: null)에서 슬롯마다 1개씩 자동 선택. 순서: 시기(season) > 우선(priority) > 반응 좋은 분류(category) > 먼저 만든 순. 컨펌(reviewed: true)된 것만 올라감.",
+  "slots": {
+    "weekdays": [
+      0,
+      4
+    ],
+    "time": "20:00",
+    "from": "2026-11-24"
+  },
+  "categories": {
+    "dil": "말·표현",
+    "yemek": "음식·식탁",
+    "gelenek": "명절·전통",
+    "gunluk": "생활·제도"
+  },
   "posts": [
     {
       "id": "01-hitap",
@@ -10,7 +24,8 @@
       "day": 0,
       "time": "20:00",
       "reviewed": true,
-      "title": "호칭 (오빠·언니·형·누나)"
+      "title": "호칭 (오빠·언니·형·누나)",
+      "category": "dil"
     },
     {
       "id": "03-kimjang",
@@ -19,7 +34,8 @@
       "day": 3,
       "time": "20:00",
       "reviewed": true,
-      "title": "김장"
+      "title": "김장",
+      "category": "gelenek"
     },
     {
       "id": "04-suneung",
@@ -28,7 +44,8 @@
       "day": 7,
       "time": "20:00",
       "reviewed": true,
-      "title": "수능"
+      "title": "수능",
+      "category": "gunluk"
     },
     {
       "id": "06-bahsis",
@@ -37,7 +54,8 @@
       "day": 10,
       "time": "20:00",
       "reviewed": true,
-      "title": "팁 문화"
+      "title": "팁 문화",
+      "category": "gunluk"
     },
     {
       "id": "07-kore-yasi",
@@ -46,7 +64,8 @@
       "day": 14,
       "time": "20:00",
       "reviewed": true,
-      "title": "한국 나이"
+      "title": "한국 나이",
+      "category": "gunluk"
     },
     {
       "id": "09-miyeokguk",
@@ -55,7 +74,8 @@
       "day": 17,
       "time": "20:00",
       "reviewed": true,
-      "title": "생일 미역국"
+      "title": "생일 미역국",
+      "category": "yemek"
     },
     {
       "id": "10-selam",
@@ -64,7 +84,8 @@
       "day": 21,
       "time": "20:00",
       "reviewed": true,
-      "title": "인사말 (안녕·안녕하세요·안녕하십니까)"
+      "title": "인사말 (안녕·안녕하세요·안녕하십니까)",
+      "category": "dil"
     },
     {
       "id": "11-yemek-selami",
@@ -73,16 +94,17 @@
       "day": 24,
       "time": "20:00",
       "reviewed": true,
-      "title": "식사 인사 (밥 먹었어?)"
+      "title": "식사 인사 (밥 먹었어?)",
+      "category": "dil"
     },
     {
       "id": "12-sujeo",
       "type": "carousel",
       "src": "studio/carousels/12-sujeo",
-      "day": 28,
-      "time": "20:00",
+      "day": null,
       "reviewed": false,
-      "title": "수저 (숟가락·젓가락)"
+      "title": "수저 (숟가락·젓가락)",
+      "category": "yemek"
     }
   ]
 }

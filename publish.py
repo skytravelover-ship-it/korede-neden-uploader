@@ -7,6 +7,16 @@ Usage
   python3 publish.py                     # publish every due, reviewed, not-yet-published post
   python3 publish.py --only 01-hitap     # publish one reviewed post now, ignoring its time
   python3 publish.py --verify            # check token and account only
+  python3 publish.py --queue             # show the stock list and which post each coming slot would get
+  python3 publish.py --stats             # fetch reactions (likes, comments, reach, saves, shares) into stats.json
+
+Stock: a post with "day": null is kept in stock. At every slot (posts.json "slots": weekdays + time,
+from "slots.from") one reviewed stock post is published, chosen in this order:
+  1. seasonal posts whose "season" window (MM-DD to MM-DD) includes the slot date
+  2. higher "priority" first (Jong: "이거 먼저")
+  3. the category with the best reactions so far (stats.json, posts older than 2 days, at least 2 per category)
+  4. oldest first (order in posts.json)
+A post outside its season window is never picked. Two posts of the same category in a row are avoided when possible.
 
 Environment
   IG_USER_ID       Instagram professional account ID
@@ -35,6 +45,8 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 STATE = HERE / "state.json"
+STATS = HERE / "stats.json"
+STATS_EVERY_HOURS = 12
 MAX_JPEG = 8 * 1024 * 1024
 MAX_VIDEO = 300 * 1024 * 1024   # Reels API limit
 MAX_HASHTAGS = 5                # Instagram app limit since 2025
@@ -60,11 +72,109 @@ def tz(cfg):
 
 
 def due_at(cfg, post):
-    if not cfg.get("launch_date"):
+    if not cfg.get("launch_date") or post.get("day") is None:
         return None
     d = datetime.strptime(cfg["launch_date"], "%Y-%m-%d").date() + timedelta(days=post["day"])
     hh, mm = post["time"].split(":")
     return datetime(d.year, d.month, d.day, int(hh), int(mm), tzinfo=tz(cfg))
+
+
+def is_stock(post):
+    return post.get("day") is None
+
+
+def slot_times(cfg, start, count):
+    """Next `count` slot datetimes at or after `start` (aware datetime)."""
+    sl = cfg.get("slots")
+    if not sl:
+        return []
+    z = tz(cfg)
+    first = max(datetime.strptime(sl["from"], "%Y-%m-%d").date(), start.astimezone(z).date())
+    hh, mm = sl["time"].split(":")
+    out, d = [], first
+    while len(out) < count and d < first + timedelta(days=400):
+        t = datetime(d.year, d.month, d.day, int(hh), int(mm), tzinfo=z)
+        if d.weekday() in sl["weekdays"] and t >= start:
+            out.append(t)
+        d += timedelta(days=1)
+    return out
+
+
+def last_slot(cfg, now):
+    """The most recent slot time <= now, or None."""
+    sl = cfg.get("slots")
+    if not sl:
+        return None
+    z = tz(cfg)
+    hh, mm = sl["time"].split(":")
+    d = now.astimezone(z).date()
+    for _ in range(8):
+        t = datetime(d.year, d.month, d.day, int(hh), int(mm), tzinfo=z)
+        if d.weekday() in sl["weekdays"] and t <= now and d >= datetime.strptime(sl["from"], "%Y-%m-%d").date():
+            return t
+        d -= timedelta(days=1)
+    return None
+
+
+def in_season(post, when):
+    se = post.get("season")
+    if not se:
+        return True
+    md = when.strftime("%m-%d")
+    a, b = se["from"], se["to"]
+    return a <= md <= b if a <= b else (md >= a or md <= b)
+
+
+def category_scores(cfg, state, stats, now):
+    """Average reaction score per category. Uses reach-based rate when every measured post has reach."""
+    cat = {p["id"]: p.get("category") for p in cfg["posts"]}
+    rows = []
+    for pid, st in stats.items():
+        pub = state.get(pid, {}).get("published_at")
+        if not cat.get(pid) or not pub or now - datetime.fromisoformat(pub) < timedelta(days=2):
+            continue
+        inter = sum(st.get(k) or 0 for k in ("likes", "comments", "saved", "shares"))
+        rows.append((cat[pid], inter, st.get("reach")))
+    use_rate = rows and all(r for _, _, r in rows)
+    by = {}
+    for c, inter, reach in rows:
+        by.setdefault(c, []).append(inter / reach if use_rate else inter)
+    return {c: sum(v) / len(v) for c, v in by.items() if len(v) >= 2}
+
+
+def pick_stock(cfg, state, stats, when, now, taken=(), last_cat=None):
+    """Choose the stock post for slot `when`. Returns (post, reason) or (None, reason)."""
+    scores = category_scores(cfg, state, stats, now)
+    cands = [(i, p) for i, p in enumerate(cfg["posts"])
+             if is_stock(p) and p.get("reviewed") and p["id"] not in state and p["id"] not in taken
+             and in_season(p, when) and not check_post(p)[3]]
+    if not cands:
+        return None, "재고 없음"
+    seasonal = [c for c in cands if c[1].get("season")]
+    if seasonal:
+        seasonal.sort(key=lambda c: (c[1]["season"]["to"], c[0]))
+        return seasonal[0][1], "시기"
+    avg = sum(scores.values()) / len(scores) if scores else 0  # unmeasured categories count as average
+    cands.sort(key=lambda c: (-c[1].get("priority", 0), -scores.get(c[1].get("category"), avg), c[0]))
+    best = cands[0]
+    if best[1].get("category") == last_cat and not best[1].get("priority"):
+        other = [c for c in cands if c[1].get("category") != last_cat]
+        if other:
+            best = other[0]
+    p = best[1]
+    if p.get("priority"):
+        why = "우선 지정"
+    elif scores.get(p.get("category"), 0) > avg:
+        why = f"반응 좋은 분류({p.get('category')})"
+    else:
+        why = "순서"
+    return p, why
+
+
+def last_category(cfg, state):
+    cat = {p["id"]: p.get("category") for p in cfg["posts"]}
+    done = sorted(((v.get("published_at", ""), k) for k, v in state.items()), reverse=True)
+    return cat.get(done[0][1]) if done else None
 
 
 def jpeg_size(path):
@@ -212,6 +322,19 @@ class Api:
         link = self.call("GET", media, fields="permalink").get("permalink")
         return media, comment_id, link
 
+    def media_stats(self, media):
+        """Likes/comments always; reach/saved/shares only if the token has insights permission."""
+        out = {}
+        r = self.call("GET", media, fields="like_count,comments_count")
+        out["likes"], out["comments"] = r.get("like_count"), r.get("comments_count")
+        try:
+            r = self.call("GET", f"{media}/insights", metric="reach,saved,shares")
+            for m in r.get("data", []):
+                out[m["name"]] = (m.get("values") or [{}])[0].get("value", m.get("total_value", {}).get("value"))
+        except RuntimeError as e:
+            out["insights_error"] = str(e)[:200]
+        return out
+
     def publish_carousel(self, urls, caption, comment):
         children = []
         for u in urls:
@@ -249,6 +372,9 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--only")
     ap.add_argument("--verify", action="store_true", help="check the token and account, publish nothing")
+    ap.add_argument("--queue", action="store_true", help="show stock and the coming slots")
+    ap.add_argument("--stats", action="store_true", help="fetch reactions into stats.json now")
+    ap.add_argument("--now", help=argparse.SUPPRESS)  # testing: pretend it is this ISO time
     a = ap.parse_args()
 
     if a.verify:
@@ -258,7 +384,15 @@ def main():
         return
 
     cfg, state = load_cfg(), load_state()
-    now = datetime.now(timezone.utc)
+    stats = json.loads(STATS.read_text(encoding="utf-8")) if STATS.exists() else {}
+    now = datetime.fromisoformat(a.now) if a.now else datetime.now(timezone.utc)
+
+    if a.stats:
+        update_stats(state, stats, force=True)
+        return
+    if a.queue:
+        show_queue(cfg, state, stats, now)
+        return
     bad = False
     todo = []
     for p in cfg["posts"]:
@@ -267,6 +401,8 @@ def main():
         done = p["id"] in state
         if done:
             tag = "게시됨"
+        elif is_stock(p):
+            tag = "재고" + (" (검수 전)" if not p.get("reviewed") else "")
         elif not p.get("reviewed"):
             tag = "검수 전 (올리지 않음)"
         elif when is None:
@@ -278,29 +414,47 @@ def main():
         for pr in problems:
             print(f"    ⚠ {pr}")
             bad = True
-        if done or not p.get("reviewed"):
+        if done or not p.get("reviewed") or (is_stock(p) and a.only != p["id"]):
             if a.only == p["id"] and not done:
                 print("    ⚠ reviewed가 false라서 올리지 않음 (검수 후 posts.json에서 true로)")
             continue
         if a.only and p["id"] == a.only:
-            todo.append((p, files, caption, comment, problems))
+            todo.append((p, files, caption, comment, problems, None))
         elif not a.only and when and when <= now:
             if now - when > timedelta(hours=MAX_LATE_HOURS):
                 print(f"    ⚠ 게시 시각에서 {MAX_LATE_HOURS}시간 넘게 지나 자동 게시하지 않음 (--only {p['id']} 로 수동 게시)")
             else:
-                todo.append((p, files, caption, comment, problems))
+                todo.append((p, files, caption, comment, problems, None))
 
     if a.check:
         sys.exit(1 if bad else 0)
+
+    # stock slot: fill the latest slot if nothing was published for it and no dated post is due that day
+    slot = None if a.only else last_slot(cfg, now)
+    if slot and now - slot <= timedelta(hours=MAX_LATE_HOURS):
+        key = slot.isoformat()
+        used = any(v.get("slot") == key for v in state.values())
+        dated = any(not is_stock(p) and due_at(cfg, p) and due_at(cfg, p).date() == slot.date() for p in cfg["posts"])
+        if not used and not dated:
+            p, why = pick_stock(cfg, state, stats, slot, now, last_cat=last_category(cfg, state))
+            if p:
+                files, caption, comment, problems = check_post(p)
+                print(f"[슬롯 {slot.strftime('%Y-%m-%d %H:%M')}] 재고에서 {p['id']} 선택 (이유: {why})")
+                todo.append((p, files, caption, comment, problems, key))
+            else:
+                print(f"[슬롯 {slot.strftime('%Y-%m-%d %H:%M')}] 올릴 재고 없음")
+
     if not todo:
         print("지금 올릴 게시물 없음")
+        if not a.dry_run:
+            update_stats(state, stats)
         return
 
     base = os.environ.get("IMAGE_BASE_URL", "<IMAGE_BASE_URL>").rstrip("/")
     api = None if a.dry_run else Api()
     if api and api.quota_left() < len(todo):
         sys.exit("오늘 게시 한도가 부족합니다")
-    for p, files, caption, comment, problems in todo:
+    for p, files, caption, comment, problems, slot_key in todo:
         if problems:
             print(f"[{p['id']}] 문제가 있어 건너뜀")
             continue
@@ -316,8 +470,60 @@ def main():
             media, comment_id, link = api.publish_reel(files[0], urls[0], urls[1], caption, comment)
         state[p["id"]] = {"media_id": media, "comment_id": comment_id, "permalink": link,
                           "published_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+        if slot_key:
+            state[p["id"]]["slot"] = slot_key
         save_state(state)
         print(f"[{p['id']}] 게시 완료 {link}")
+    if api:
+        update_stats(state, stats)
+
+
+def update_stats(state, stats, force=False):
+    """Refresh reactions for published posts every STATS_EVERY_HOURS. Never fails the run."""
+    if not state:
+        return
+    last = stats.get("_fetched_at")
+    if not force and last and datetime.now(timezone.utc) - datetime.fromisoformat(last) < timedelta(hours=STATS_EVERY_HOURS):
+        return
+    try:
+        api = Api()
+        for pid, v in state.items():
+            if v.get("media_id"):
+                stats[pid] = api.media_stats(v["media_id"])
+        stats["_fetched_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        STATS.write_text(json.dumps(stats, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"반응 수집: {len(state)}개")
+    except Exception as e:  # stats must never block publishing
+        print(f"반응 수집 실패: {str(e)[:200]}")
+
+
+def show_queue(cfg, state, stats, now):
+    stock = [p for p in cfg["posts"] if is_stock(p) and p["id"] not in state]
+    print(f"재고 {len(stock)}개 (컨펌 {sum(1 for p in stock if p.get('reviewed'))}개)")
+    for p in stock:
+        se = p.get("season")
+        extra = [f"분류 {p.get('category', '-')}"]
+        if se:
+            extra.append(f"시기 {se['from']}~{se['to']}")
+        if p.get("priority"):
+            extra.append(f"우선 {p['priority']}")
+        print(f"  {p['id']:18} {'컨펌' if p.get('reviewed') else '검수 전'}  {', '.join(extra)}  {p.get('title', '')}")
+    print("\n다음 게시 예정 (지금 기준 예상, 반응에 따라 바뀜)")
+    dated = {due_at(cfg, p).date(): p for p in cfg["posts"]
+             if not is_stock(p) and p["id"] not in state and due_at(cfg, p) and due_at(cfg, p) >= now}
+    for d, p in sorted(dated.items()):
+        print(f"  {d}  {p['id']:18} 날짜 지정{'' if p.get('reviewed') else ' (검수 전: 안 올라감)'}")
+    taken, last = set(), last_category(cfg, state)
+    for t in slot_times(cfg, now, 8):
+        if t.date() in dated:
+            continue
+        p, why = pick_stock(cfg, state, stats, t, now, taken, last)
+        if p:
+            taken.add(p["id"])
+            last = p.get("category")
+            print(f"  {t.date()}  {p['id']:18} 재고에서 ({why})")
+        else:
+            print(f"  {t.date()}  (비어 있음: 컨펌된 재고 없음)")
 
 
 if __name__ == "__main__":
