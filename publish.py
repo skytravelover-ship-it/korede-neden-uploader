@@ -6,6 +6,7 @@ Usage
   python3 publish.py --dry-run           # show what would be published now (no network)
   python3 publish.py                     # publish every due, reviewed, not-yet-published post
   python3 publish.py --only 01-hitap     # publish one reviewed post now, ignoring its time
+  python3 publish.py --verify            # check token and account only
 
 Environment
   IG_USER_ID       Instagram professional account ID
@@ -247,7 +248,14 @@ def main():
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--only")
+    ap.add_argument("--verify", action="store_true", help="check the token and account, publish nothing")
     a = ap.parse_args()
+
+    if a.verify:
+        api = Api()
+        me = api.call("GET", api.user, fields="username")
+        print(f"연결 확인: @{me.get('username')} ({api.host}), 오늘 남은 게시 한도 {api.quota_left()}")
+        return
 
     cfg, state = load_cfg(), load_state()
     now = datetime.now(timezone.utc)
