@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+KR:wght@500;700&family=IBM+Plex+Mono:wght@500&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=block" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0}
+  .cv{position:relative;width:1080px;height:1350px;overflow:hidden}
+  .abs{position:absolute}
+  .ph{position:absolute;background-size:cover;background-repeat:no-repeat;background-position:center}
+  .ko{font-family:'Noto Serif KR',serif}
+  b{font-weight:700}
+  /* A: 에디토리얼 */
+  .A{font-family:Inter,sans-serif;color:#141414;background:#F2EEE6}
+  .A .serif{font-family:Fraunces,serif;font-weight:600;letter-spacing:-1px;line-height:1.05}
+  .A .kick{font-weight:600;font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#C8372D}
+  .A .kick:before{content:'';display:inline-block;width:10px;height:10px;background:#C8372D;margin-right:14px;vertical-align:2px}
+  .A .foot{font-weight:600;font-size:22px;letter-spacing:3px;text-transform:uppercase;opacity:.6}
+  .A .body{font-size:38px;line-height:1.45}
+  /* B: 사전 */
+  .B{font-family:'Noto Serif',serif;color:#1B1B1F;background:#FAF7F0}
+  .B .mono{font-family:'IBM Plex Mono',monospace;font-size:22px;letter-spacing:2px;text-transform:uppercase;color:#1F3A93}
+  .B .hw{font-weight:700;letter-spacing:-1px;line-height:1.1}
+  .B .body{font-size:38px;line-height:1.5}
+  .B .rule{height:2px;background:#1B1B1F}
+  .B .thin{height:1px;background:rgba(27,27,31,.25)}
+  /* C: 질문-답 */
+  .C{font-family:Inter,sans-serif;color:#111;background:#fff}
+  .C .big{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-2px;line-height:1.0}
+  .C .mid{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:-1px;line-height:1.08}
+  .C .tag{display:inline-block;font-weight:700;font-size:24px;letter-spacing:2px;text-transform:uppercase;background:#111;color:#fff;padding:10px 18px;border-radius:40px}
+  .C .body{font-size:38px;line-height:1.45}
+</style>
+<script src="content.js"></script>
+</head><body><div id="root"></div>
+<script>
+const q = new URLSearchParams(location.search);
+const V = q.get('v'), P = q.get('p'), N = +q.get('n');
+const S = POSTS[P][N - 1], TOT = POSTS[P].length, [NAME, HANDLE] = NAMES[V];
+const pg = `${String(N).padStart(2, '0')} / ${String(TOT).padStart(2, '0')}`;
+const img = (f, x, y, w, h, pos, r = 0) => `<div class="ph" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;background-image:url(${PHOTO(f)});background-position:${pos || 'center'};border-radius:${r}px"></div>`;
+
+// ---------- A: 에디토리얼 ----------
+const A = {
+  cover: s => `${img(s.photo, 0, 0, 1080, 1350, s.pos)}
+    <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,0) 30%,rgba(0,0,0,0) 45%,rgba(0,0,0,.85))"></div>
+    <div class="abs foot" style="left:72px;top:72px;color:#fff">${NAME}</div><div class="abs foot" style="right:72px;top:72px;color:#fff">${pg}</div>
+    <div class="abs" style="left:72px;right:90px;bottom:72px;color:#fff">
+      <div class="kick" style="color:#fff">${s.kicker}</div>
+      <div class="serif" style="font-size:92px;margin:26px 0 30px">${s.q}</div>
+      <div style="font-size:36px;font-weight:500;opacity:.9">${s.dek}</div></div>`,
+  text: s => `${img(s.photo, 0, 0, 1080, 790)}<div class="abs foot" style="right:72px;top:72px;color:#fff">${pg}</div>
+    <div class="abs" style="left:72px;right:72px;top:850px"><div class="kick">${s.kicker}</div>
+      <div class="serif" style="font-size:66px;margin:22px 0 26px">${s.title}</div><div class="body">${s.body}</div></div>
+    <div class="abs foot" style="left:72px;bottom:56px;text-transform:none;letter-spacing:1px">${HANDLE}</div>`,
+  table: s => `<div class="abs foot" style="right:72px;top:72px">${pg}</div>
+    <div class="abs" style="left:72px;right:72px;top:72px"><div class="kick">${s.kicker}</div><div class="serif" style="font-size:72px;margin-top:22px">${s.title}</div></div>
+    <div class="abs" style="left:72px;right:72px;top:330px">${s.groups.map(([h, rows]) => `
+      <div class="foot" style="margin:36px 0 10px">${h}</div>${rows.map(r => `
+      <div style="display:flex;align-items:baseline;justify-content:space-between;border-top:2px solid rgba(20,20,20,.18);padding:30px 0">
+        <span class="serif" style="font-size:104px;width:420px">${r[0]}</span><span class="ko" style="font-size:52px;opacity:.5;width:200px">${r[1]}</span><span style="font-size:50px;font-weight:600;width:200px;text-align:right">= ${r[2]}</span></div>`).join('')}`).join('')}</div>`,
+  steps: s => `${img(s.photo, 0, 0, 1080, 520)}<div class="abs foot" style="right:72px;top:72px;color:#fff">${pg}</div>
+    <div class="abs" style="left:72px;right:72px;top:580px"><div class="kick">${s.kicker}</div><div class="serif" style="font-size:66px;margin:22px 0 20px">${s.title}</div>
+    ${s.items.map((t, i) => `<div style="display:flex;gap:34px;border-top:2px solid rgba(20,20,20,.15);padding:26px 0"><span class="serif" style="font-size:64px;color:#C8372D;width:90px">${i + 1}</span><span style="font-size:38px;line-height:1.35;padding-top:8px">${t}</span></div>`).join('')}</div>`,
+  num: s => `<div class="abs" style="inset:0;background:#141414"></div><div class="abs foot" style="right:72px;top:72px;color:#F2EEE6">${pg}</div>
+    <div class="abs" style="left:72px;right:72px;top:72px;color:#F2EEE6"><div class="kick">${s.kicker}</div>
+      <div class="serif" style="font-size:330px;color:#C8372D;letter-spacing:-8px;line-height:.9;margin-top:120px">${s.num}</div>
+      <div class="serif" style="font-size:60px;margin:20px 0 70px">${s.unit}</div><div class="body">${s.body}</div></div>`,
+  end: s => `<div class="abs foot" style="right:72px;top:72px">${pg}</div>
+    <div class="abs" style="left:72px;right:72px;top:72px"><div class="kick">Kelime</div>
+      <div class="ko" style="font-size:260px;font-weight:700;line-height:1;margin-top:90px">${s.ko}</div>
+      <div class="serif" style="font-size:72px;font-style:italic;margin:30px 0 26px">${s.rom}</div><div class="body">${s.mean}</div></div>
+    <div class="abs" style="left:72px;right:72px;bottom:72px;border-top:2px solid #141414;padding-top:24px;display:flex;justify-content:space-between;font-size:22px">
+      <span style="opacity:.65;max-width:720px;line-height:1.4">${s.src}</span><span style="font-weight:700">${HANDLE}</span></div>`,
+};
+
+// ---------- B: 사전 ----------
+const Bhead = `<div class="abs" style="left:72px;right:72px;top:64px;display:flex;justify-content:space-between"><span class="mono">${NAME}</span><span class="mono">${pg}</span></div><div class="abs rule" style="left:72px;right:72px;top:112px"></div>`;
+const Bfoot = `<div class="abs thin" style="left:72px;right:72px;bottom:110px"></div><div class="abs mono" style="left:72px;bottom:62px;text-transform:none;letter-spacing:1px">${HANDLE}</div>`;
+const B = {
+  cover: s => `${Bhead}
+    <div class="abs" style="left:72px;right:72px;top:190px"><div class="mono">${s.kicker} · Soru</div>
+      <div class="hw" style="font-size:${s.q.length > 50 ? 84 : 96}px;margin-top:36px">${s.q}</div>
+      <div style="font-size:40px;font-style:italic;margin-top:36px;color:#444">${s.dek}</div></div>
+    ${img(s.photo, 72, 790, 936, 450, s.pos)}`,
+  text: s => `${Bhead}
+    <div class="abs" style="left:72px;right:72px;top:170px"><div class="mono">${s.kicker}</div>
+      <div class="hw" style="font-size:70px;margin:30px 0 36px">${s.title}</div><div class="body">${s.body}</div></div>
+    ${s.photo ? img(s.photo, 72, 660, 936, 520, s.pos) : ''}${Bfoot}`,
+  table: s => `${Bhead}
+    <div class="abs" style="left:72px;right:72px;top:170px"><div class="mono">${s.kicker}</div><div class="hw" style="font-size:70px;margin-top:30px">${s.title}</div></div>
+    <div class="abs" style="left:72px;right:72px;top:360px">${s.groups.map(([h, rows]) => `
+      <div class="mono" style="color:#1B1B1F;margin:34px 0 6px">${h}</div>${rows.map(r => `
+      <div style="display:flex;align-items:baseline;border-top:1px solid rgba(27,27,31,.25);padding:26px 0">
+        <span class="ko" style="font-size:84px;font-weight:700;width:260px">${r[1]}</span><span style="font-size:60px;font-style:italic;width:380px">${r[0]}</span><span style="font-size:44px">→ ${r[2]}</span></div>`).join('')}`).join('')}</div>${Bfoot}`,
+  steps: s => `${Bhead}
+    <div class="abs" style="left:72px;right:72px;top:170px"><div class="mono">${s.kicker}</div><div class="hw" style="font-size:70px;margin:30px 0 30px">${s.title}</div>
+    ${s.items.map((t, i) => `<div style="display:flex;gap:30px;border-top:1px solid rgba(27,27,31,.25);padding:28px 0"><span class="mono" style="font-size:34px;width:70px;flex:none">${i + 1}.</span><span class="body">${t}</span></div>`).join('')}</div>
+    ${s.photo ? img(s.photo, 72, 930, 936, 290) : ''}${Bfoot}`,
+  trio: s => `${Bhead}
+    <div class="abs" style="left:72px;right:72px;top:170px"><div class="mono">${s.kicker}</div><div class="hw" style="font-size:70px;margin-top:30px">${s.title}</div></div>
+    <div class="abs" style="left:72px;right:72px;top:370px">${s.rows.map(r => `
+      <div style="border-top:1px solid rgba(27,27,31,.25);padding:30px 0 34px">
+        <div class="ko" style="font-size:${r[0].length > 8 ? 72 : 88}px;font-weight:700;line-height:1.1">${r[0]}</div>
+        <div style="font-size:44px;font-style:italic;margin:10px 0 14px">${r[1]}</div>
+        <div style="font-size:32px;line-height:1.35"><span class="mono" style="font-size:24px;margin-right:16px">${r[2]}</span>${r[3]}</div></div>`).join('')}</div>${Bfoot}`,
+  num: s => `${Bhead}
+    <div class="abs" style="left:72px;right:72px;top:170px"><div class="mono">${s.kicker}</div>
+      <div class="hw" style="font-size:280px;color:#1F3A93;letter-spacing:-6px;line-height:1;margin-top:40px">${s.num}</div>
+      <div style="font-size:52px;font-style:italic;margin:14px 0 60px">${s.unit}</div><div class="body">${s.body}</div></div>${Bfoot}`,
+  end: s => `${Bhead}
+    <div class="abs" style="left:72px;right:72px;top:190px">
+      <div style="display:flex;align-items:baseline;gap:40px"><span class="ko" style="font-size:${s.ko.length > 4 ? 140 : 230}px;font-weight:700;line-height:1.05">${s.ko}</span></div>
+      <div style="font-size:60px;font-style:italic;margin:24px 0 10px">${s.rom} <span class="mono" style="font-size:26px;vertical-align:10px">${s.kind || 'isim'}</span></div>
+      <div class="thin" style="margin:30px 0"></div>
+      <div class="body"><span class="mono" style="font-size:30px">1.</span> ${s.mean}</div></div>
+    <div class="abs" style="left:72px;right:72px;bottom:150px;font-size:24px;line-height:1.5;color:#555">${s.src}</div>${Bfoot}`,
+};
+
+// ---------- C: 질문과 답 ----------
+const BLUE = '#2337C6', YEL = '#FFD23F';
+const Chead = (dark) => `<div class="abs" style="left:72px;right:72px;top:64px;display:flex;justify-content:space-between;font-weight:700;font-size:24px;color:${dark ? '#fff' : '#111'}"><span>${NAME}</span><span style="opacity:.6">${pg}</span></div>`;
+const C = {
+  cover: s => `<div class="abs" style="inset:0;background:${BLUE}"></div>${Chead(true)}
+    <div class="abs" style="left:72px;right:72px;top:160px;color:#fff"><span class="tag" style="background:${YEL};color:#111">${s.kicker}</span>
+      <div class="big" style="font-size:100px;margin-top:40px">${s.q}</div></div>
+    ${img(s.photo, 72, 640, 936, 560, s.pos, 28)}
+    <div class="abs" style="left:72px;bottom:60px;color:#fff;font-size:34px;font-weight:600">${s.dek}</div>`,
+  text: s => `${Chead(false)}
+    ${img(s.photo, 72, 140, 936, 680, '', 28)}
+    <div class="abs" style="left:72px;right:72px;top:870px"><span class="tag">${s.kicker}</span>
+      <div class="mid" style="font-size:70px;margin:28px 0 24px">${s.title}</div><div class="body">${s.body}</div></div>`,
+  table: s => `<div class="abs" style="inset:0;background:${YEL}"></div>${Chead(false)}
+    <div class="abs" style="left:72px;right:72px;top:150px"><span class="tag">${s.kicker}</span><div class="big" style="font-size:96px;margin-top:30px">${s.title}</div></div>
+    <div class="abs" style="left:72px;right:72px;top:420px;display:grid;grid-template-columns:1fr 1fr;gap:28px">${s.groups.map(([h, rows]) => `
+      <div style="background:#fff;border-radius:28px;padding:36px 36px 20px"><div style="font-weight:700;font-size:28px;margin-bottom:10px">${h}</div>${rows.map(r => `
+        <div style="border-top:2px solid #eee;padding:24px 0"><div class="big" style="font-size:84px">${r[0]}</div><div style="font-size:34px;margin-top:8px"><span class="ko" style="opacity:.5">${r[1]}</span> · <b>${r[2]}</b></div></div>`).join('')}</div>`).join('')}</div>`,
+  steps: s => `${Chead(false)}${img(s.photo, 72, 140, 936, 430, '', 28)}
+    <div class="abs" style="left:72px;right:72px;top:630px"><span class="tag">${s.kicker}</span><div class="mid" style="font-size:70px;margin:26px 0 20px">${s.title}</div>
+    ${s.items.map((t, i) => `<div style="display:flex;gap:26px;align-items:center;padding:18px 0"><span style="flex:none;width:72px;height:72px;border-radius:50%;background:${BLUE};color:#fff;font:800 38px 'Bricolage Grotesque';display:flex;align-items:center;justify-content:center">${i + 1}</span><span style="font-size:37px;line-height:1.35">${t}</span></div>`).join('')}</div>`,
+  num: s => `<div class="abs" style="inset:0;background:${BLUE}"></div>${Chead(true)}
+    <div class="abs" style="left:72px;right:72px;top:160px;color:#fff"><span class="tag" style="background:${YEL};color:#111">${s.kicker}</span>
+      <div class="big" style="font-size:320px;color:${YEL};margin-top:60px;letter-spacing:-10px">${s.num}</div>
+      <div class="mid" style="font-size:60px;margin:10px 0 60px">${s.unit}</div><div class="body">${s.body}</div></div>`,
+  end: s => `<div class="abs" style="inset:0;background:${YEL}"></div>${Chead(false)}
+    <div class="abs" style="left:72px;right:72px;top:160px"><span class="tag">Bugünün kelimesi</span>
+      <div class="ko" style="font-size:250px;font-weight:700;line-height:1;margin-top:70px">${s.ko}</div>
+      <div class="big" style="font-size:80px;margin:30px 0 26px">${s.rom}</div><div class="body">${s.mean}</div></div>
+    <div class="abs" style="left:72px;right:72px;bottom:64px;display:flex;justify-content:space-between;font-size:22px;gap:30px"><span style="opacity:.7;line-height:1.4">${s.src}</span><b style="flex:none">${HANDLE}</b></div>`,
+};
+const R = { A, B, C }[V];
+document.getElementById('root').innerHTML = `<div class="cv ${V}">${R[S.t](S)}</div>`;
+document.fonts.ready.then(() => { document.title = 'ready'; });
+</script></body></html>

@@ -74,6 +74,15 @@
       "time": "20:00",
       "reviewed": true,
       "title": "식사 인사 (밥 먹었어?)"
+    },
+    {
+      "id": "12-sujeo",
+      "type": "carousel",
+      "src": "studio/carousels/12-sujeo",
+      "day": 28,
+      "time": "20:00",
+      "reviewed": false,
+      "title": "수저 (숟가락·젓가락)"
     }
   ]
 }

@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parent  # folder that holds 업로드_v3_N주차/
+ROOT = HERE.parent  # older posts: 업로드_v3_N주차/ next to the repo; newer posts: studio/carousels/ inside it
 
 
 def to_jpeg(png, jpg):
@@ -27,10 +27,13 @@ def to_jpeg(png, jpg):
 def main():
     cfg = json.loads((HERE / "posts.json").read_text(encoding="utf-8"))
     for p in cfg["posts"]:
-        src = ROOT / p["src"]
-        if not src.is_dir():
-            sys.exit(f"[{p['id']}] 폴더 없음: {src}")
+        src = HERE / p["src"] if (HERE / p["src"]).is_dir() else ROOT / p["src"]
         out = HERE / "posts" / p["id"]
+        if not src.is_dir():
+            if list(out.glob("*.jpg")):
+                print(f"[{p['id']}] 원본 폴더 없음, 이미 만든 posts/ 파일 유지")
+                continue
+            sys.exit(f"[{p['id']}] 폴더 없음: {src}")
         out.mkdir(parents=True, exist_ok=True)
         for old in list(out.glob("*.jpg")) + list(out.glob("*.mp4")):
             old.unlink()
