@@ -1,7 +1,7 @@
 {
   "launch_date": "2026-10-30",
   "timezone_utc_offset": "+03:00",
-  "note": "런칭 2026-10-30(금). 캐러셀만 월·금 터키 시간 20:00. 릴스는 보류(2026-10-30 Jong 결정).",
+  "note": "런칭 2026-10-30(금). 캐러셀만 월·금 터키 시간 20:00 (11/23까지 8개). 릴스는 보류(2026-10-30 Jong 결정).",
   "posts": [
     {
       "id": "01-hitap",
@@ -56,6 +56,24 @@
       "time": "20:00",
       "reviewed": true,
       "title": "생일 미역국"
+    },
+    {
+      "id": "10-selam",
+      "type": "carousel",
+      "src": "업로드_v3_4주차/10_11월20일(금)_캐러셀_selam",
+      "day": 21,
+      "time": "20:00",
+      "reviewed": true,
+      "title": "인사말 (안녕·안녕하세요·안녕하십니까)"
+    },
+    {
+      "id": "11-yemek-selami",
+      "type": "carousel",
+      "src": "업로드_v3_4주차/11_11월23일(월)_캐러셀_yemek-selami",
+      "day": 24,
+      "time": "20:00",
+      "reviewed": true,
+      "title": "식사 인사 (밥 먹었어?)"
     }
   ]
 }
