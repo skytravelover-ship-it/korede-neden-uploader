@@ -1,0 +1,16 @@
+{
+  "launch_date": null,
+  "timezone_utc_offset": "+03:00",
+  "note": "launch_date를 'YYYY-MM-DD'로 넣으면 day/time 기준으로 게시 시각이 정해집니다(터키 시간). reviewed가 true인 게시물만 올라갑니다.",
+  "posts": [
+    {"id": "01-hitap",       "type": "carousel", "src": "업로드_v3_1주차/01_11월09일(월)_캐러셀_hitap",       "day": 0,  "time": "20:00", "reviewed": false, "title": "호칭 (오빠·언니·형·누나)"},
+    {"id": "02-telaffuz",    "type": "reel",     "src": "업로드_v3_1주차/02_11월11일(수)_릴스_telaffuz",      "day": 2,  "time": "20:00", "reviewed": false, "title": "릴스: 호칭 발음"},
+    {"id": "03-kimjang",     "type": "carousel", "src": "업로드_v3_1주차/03_11월13일(금)_캐러셀_kimjang",     "day": 4,  "time": "20:00", "reviewed": false, "title": "김장"},
+    {"id": "04-suneung",     "type": "carousel", "src": "업로드_v3_2주차/04_11월16일(월)_캐러셀_suneung",     "day": 7,  "time": "20:00", "reviewed": false, "title": "수능"},
+    {"id": "05-selamlasma",  "type": "reel",     "src": "업로드_v3_2주차/05_11월18일(수)_릴스_selamlasma",    "day": 9,  "time": "20:00", "reviewed": false, "title": "릴스: 인사말 3단계"},
+    {"id": "06-bahsis",      "type": "carousel", "src": "업로드_v3_2주차/06_11월20일(금)_캐러셀_bahsis",      "day": 11, "time": "20:00", "reviewed": false, "title": "팁 문화"},
+    {"id": "07-kore-yasi",   "type": "carousel", "src": "업로드_v3_3주차/07_11월23일(월)_캐러셀_kore-yasi",   "day": 14, "time": "20:00", "reviewed": false, "title": "한국 나이"},
+    {"id": "08-yemek-selami","type": "reel",     "src": "업로드_v3_3주차/08_11월25일(수)_릴스_yemek-selami",  "day": 16, "time": "20:00", "reviewed": false, "title": "릴스: 밥 먹었어?"},
+    {"id": "09-miyeokguk",   "type": "carousel", "src": "업로드_v3_3주차/09_11월27일(금)_캐러셀_miyeokguk",   "day": 18, "time": "20:00", "reviewed": false, "title": "생일 미역국"}
+  ]
+}
