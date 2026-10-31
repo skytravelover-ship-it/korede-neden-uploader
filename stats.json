@@ -2,7 +2,7 @@
   "01-hitap": {
     "likes": 0,
     "comments": 0,
-    "insights_error": "GET 18378695938241057/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"A2FXoQ9mpEwQQPfh-0By77k\"}}"
+    "insights_error": "GET 18378695938241057/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"AT9zmaqwuaaWiRbVwp1XOSH\"}}"
   },
-  "_fetched_at": "2026-10-30T17:41:26+00:00"
+  "_fetched_at": "2026-10-31T07:14:08+00:00"
 }
