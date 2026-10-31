@@ -97,4 +97,16 @@ POSTS.su = [
   { t: 'text', photo: 'sujeo_flat', kicker: 'Bir ayrıntı', title: 'Kaşık masada = “Bitirdim”', body: 'Kaşığı masaya bırakmak, yemeğin bittiği anlamına gelir. Bu yüzden yemek sürerken kaşık, pilav ya da çorba kasesinin içine konur.' },
   { t: 'end', ko: '수저', rom: 'sujeo', mean: 'Kaşık ve yemek çubuğu; ikisinin birlikte adı.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“sujeo”, “sutgarak”, “jeotgarak”) · Kore Ulusal Miras İdaresi, “Hansik sofra adabı” (2024-10-04)' },
 ];
+// 6주차: 동지 팥죽 (2026-10-31 작성, 컨펌 대기, 12월 시기)
+POSTS.dj = [
+  { t: 'cover', photo: 'dongji_pat', pos: '50% 55%', kicker: 'Gelenek', q: 'Kore\'de yılın en uzun gecesinde neden kırmızı lapa yenir?', dek: 'Adı patjuk. Günün adı dongji.' },
+  { t: 'text', photo: 'dongji_night', pos: '50% 60%', kicker: 'Dongji', title: 'Yılın en uzun gecesi', body: 'Geleneksel takvimde yıl 24 döneme ayrılır. Bunların 22\'ncisi <b>dongji</b>: gecenin en uzun, gündüzün en kısa olduğu gün. Bu yıl <b>22 Aralık</b>.' },
+  { t: 'text', photo: 'dongji_snow', pos: '50% 62%', kicker: 'Halk arasında', title: '“Küçük yeni yıl”', body: 'Dongjiden sonra günler yeniden uzar. Bu yüzden halk bu güne <b>“küçük yeni yıl”</b> dedi ve onu Seollal\'den (yeni yıl bayramı) sonra gelen önemli bir gün saydı.' },
+  { t: 'trio', kicker: 'Patjuk', title: 'Kasede ne var?', rows: [
+    ['팥죽', 'patjuk', 'Lapa', 'Fasulye suyu ve pirinçle pişen lapa'],
+    ['팥', 'pat', 'Fasulye', 'Küçük, kırmızı adzuki fasulyesi'],
+    ['새알심', 'saealsim', 'Toplar', 'Yapışkan pirinç unundan küçük toplar']] },
+  { t: 'steps', kicker: 'Neden kırmızı?', title: 'Gelenekteki anlamı', items: ['Kırmızı rengin kötü ruhları uzak tuttuğuna inanılırdı', 'Yemeden önce biraz lapa evin kapısına ya da yanındaki duvara serpilirdi', 'Bazı evlerde lapaya herkesin yaşı kadar top konur', '“Dongjide patjuk yemeden bir yaş büyümüş sayılmazsın” diye bir söz vardır'] },
+  { t: 'end', ko: '동지', rom: 'dongji', mean: 'Yılın en uzun gecesinin olduğu gün; 24 mevsim döneminin 22\'ncisi.', src: 'Kaynak: Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Dongji”, “Dongji patjuk”) · Kore Ulusal Halk Müzesi (2016-12-20) · Kore Astronomi ve Uzay Bilimi Enstitüsü (KASI)' },
+];
 const NAMES = { A: ['Kore Notları', '@kore.notlari'], B: ['Kore\'de Neden?', '@korede.neden'], C: ['Kore\'de Neden?', '@korede.neden'] };

@@ -105,6 +105,19 @@
       "reviewed": true,
       "title": "수저 (숟가락·젓가락)",
       "category": "yemek"
+    },
+    {
+      "id": "13-dongji",
+      "type": "carousel",
+      "src": "studio/carousels/13-dongji",
+      "day": null,
+      "reviewed": false,
+      "title": "동지 팥죽",
+      "category": "gelenek",
+      "season": {
+        "from": "12-17",
+        "to": "12-22"
+      }
     }
   ]
 }

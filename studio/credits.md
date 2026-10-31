@@ -78,3 +78,6 @@
 | sujeo_stew | Pexels | (페이지에서 확인) | https://www.pexels.com/photo/meal-served-on-a-table-15622968/ |
 | sujeo_flat | Pexels | (페이지에서 확인) | https://www.pexels.com/photo/spoon-chopsticks-and-pot-8112982/ |
 | banchan_spread | Pexels | (페이지에서 확인) | https://www.pexels.com/photo/white-ceramic-bowls-with-food-on-table-11186086/ |
+| dongji_pat | Pexels | Paula Berken | https://www.pexels.com/photo/red-beans-on-a-wooden-spoon-7091200/ |
+| dongji_night | Pexels | Hyeok Jang | https://www.pexels.com/photo/seoul-skyline-at-night-with-namsan-tower-31414677/ |
+| dongji_snow | Pexels | Margarita K | https://www.pexels.com/photo/snowy-day-at-gyeongbokgung-palace-seoul-30160978/ |
