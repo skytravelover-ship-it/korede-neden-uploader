@@ -109,4 +109,16 @@ POSTS.dj = [
   { t: 'steps', kicker: 'Neden kırmızı?', title: 'Gelenekteki anlamı', items: ['Kırmızı rengin kötü ruhları uzak tuttuğuna inanılırdı', 'Yemeden önce biraz lapa evin kapısına ya da yanındaki duvara serpilirdi', 'Bazı evlerde lapaya herkesin yaşı kadar top konur', '“Dongjide patjuk yemeden bir yaş büyümüş sayılmazsın” diye bir söz vardır'] },
   { t: 'end', ko: '동지', rom: 'dongji', mean: 'Yılın en uzun gecesinin olduğu gün; 24 mevsim döneminin 22\'ncisi.', src: 'Kaynak: Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Dongji”, “Dongji patjuk”) · Kore Ulusal Halk Müzesi (2016-12-20) · Kore Astronomi ve Uzay Bilimi Enstitüsü (KASI)' },
 ];
+// 7주차: 수고하세요 (2026-11-01 작성, 컨펌 대기)
+POSTS.sg = [
+  { t: 'cover', photo: 'sugo_subway', pos: '50% 50%', kicker: 'Dil', q: 'Kore\'de işten çıkarken neden patrona “sugohaseyo” denmez?', dek: 'Çalışan birine söylenen bir söz. Ama herkese değil.' },
+  { t: 'text', photo: 'sugo_tr', pos: '50% 35%', kicker: 'Türkçede', title: '“Kolay gelsin”', body: 'TDK\'ye göre <b>kolay gelsin</b>, “bir iş yapmakta olanlara söylenen iyi dilek sözü”. Korecede de çalışan birine söylenen bir söz var.' },
+  { t: 'text', photo: 'sugo_metro', pos: '50% 50%', kicker: 'Korecede', title: '“Sugo”: emek, zahmet', body: 'Sözlükte <b>sugo</b>, “bir işi yaparken güç harcayıp emek verme” demek. İşten önce çıkan biri, kalan iş arkadaşına <b>“Meonjeo gamnida. Sugohaseyo.”</b> diyebilir: “Ben çıkıyorum. Kolay gelsin.”' },
+  { t: 'trio', kicker: 'İşten çıkarken', title: 'Kime ne denir?', rows: [
+    ['수고하세요', 'sugohaseyo', 'Akrana, astına', 'Çıkan kişi, kalanlara söyler'],
+    ['수고했습니다', 'sugohaesseumnida', 'Astına', 'Kalan kişi, çıkan astına söyler'],
+    ['먼저 가겠습니다', 'meonjeo gagetseumnida', 'Üstüne', '“Önce ben çıkıyorum”']] },
+  { t: 'steps', kicker: 'Neden?', title: 'Üstlere neden söylenmez?', items: ['Ulusal Kore Dili Enstitüsü\'ne göre bu söz üstlere sık söylenir, ama dinleyenin canı sıkılabilir', 'Söz, karşıdakinin emeğini değerlendiriyormuş gibi duyulabilir', 'Yerine “Önce ben çıkıyorum” ya da “Yarın görüşürüz” (naeil boepgetseumnida) önerilir', 'Enstitü 2025\'te ekledi: algılar değişir; bu sözü artık kurala aykırı görmeyenler de var'] },
+  { t: 'end', ko: '수고하세요', rom: 'sugohaseyo', kind: 'ifade', mean: 'Çalışmaya devam eden birine söylenen iyi dilek. Akrana ve astına.', src: 'Kaynak: Ulusal Kore Dili Enstitüsü, Standart Dil Görgü Kuralları (2011), s. 171–172 · Enstitü\'nün çevrim içi yanıtı (2025-09-18) · Standart Kore Dili Sözlüğü (“sugo”) · TDK Güncel Türkçe Sözlük' },
+];
 const NAMES = { A: ['Kore Notları', '@kore.notlari'], B: ['Kore\'de Neden?', '@korede.neden'], C: ['Kore\'de Neden?', '@korede.neden'] };

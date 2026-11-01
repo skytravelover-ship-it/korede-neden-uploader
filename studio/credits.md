@@ -81,3 +81,6 @@
 | dongji_pat | Pexels | Paula Berken | https://www.pexels.com/photo/red-beans-on-a-wooden-spoon-7091200/ |
 | dongji_night | Pexels | Hyeok Jang | https://www.pexels.com/photo/seoul-skyline-at-night-with-namsan-tower-31414677/ |
 | dongji_snow | Pexels | Margarita K | https://www.pexels.com/photo/snowy-day-at-gyeongbokgung-palace-seoul-30160978/ |
+| sugo_subway | Pexels | Theodore Nguyen | https://www.pexels.com/photo/busy-seoul-subway-scene-captured-in-evening-31826590/ |
+| sugo_tr | Pexels | Ruken Kaya | https://www.pexels.com/photo/traditional-turkish-craftsman-in-istanbul-workshop-37755455/ |
+| sugo_metro | Pexels | wal_ 172619 | https://www.pexels.com/photo/commuters-in-seoul-metro-subway-carriage-36621878/ |
