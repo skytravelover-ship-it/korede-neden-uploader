@@ -127,6 +127,15 @@
       "reviewed": false,
       "title": "수고하세요 (퇴근 인사)",
       "category": "dil"
+    },
+    {
+      "id": "15-ondol",
+      "type": "carousel",
+      "src": "studio/carousels/15-ondol",
+      "day": null,
+      "reviewed": false,
+      "title": "온돌 (바닥 난방)",
+      "category": "gunluk"
     }
   ]
 }

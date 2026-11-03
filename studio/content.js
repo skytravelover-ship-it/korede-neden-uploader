@@ -121,4 +121,13 @@ POSTS.sg = [
   { t: 'steps', kicker: 'Neden?', title: 'Üstlere neden söylenmez?', items: ['Ulusal Kore Dili Enstitüsü\'ne göre bu söz üstlere sık söylenir, ama dinleyenin canı sıkılabilir', 'Söz, karşıdakinin emeğini değerlendiriyormuş gibi duyulabilir', 'Yerine “Önce ben çıkıyorum” ya da “Yarın görüşürüz” (naeil boepgetseumnida) önerilir', 'Enstitü 2025\'te ekledi: algılar değişir; bu sözü artık kurala aykırı görmeyenler de var'] },
   { t: 'end', ko: '수고하세요', rom: 'sugohaseyo', kind: 'ifade', mean: 'Çalışmaya devam eden birine söylenen iyi dilek. Akrana ve astına.', src: 'Kaynak: Ulusal Kore Dili Enstitüsü, Standart Dil Görgü Kuralları (2011), s. 171–172 · Enstitü\'nün çevrim içi yanıtı (2025-09-18) · Standart Kore Dili Sözlüğü (“sugo”) · TDK Güncel Türkçe Sözlük' },
 ];
+// 8주차: 온돌 (2026-11-03 작성, 컨펌 대기)
+POSTS.od = [
+  { t: 'cover', photo: 'hanok_floor', pos: '50% 70%', kicker: 'Günlük hayat', q: 'Kore\'de evde neden yere oturulur?', dek: 'Cevap yerin altında: ondol.' },
+  { t: 'text', photo: 'ondol_room', pos: '50% 100%', kicker: 'Ondol', title: 'Oda yerden ısınır', body: 'Sözlüğe göre <b>ondol</b>, ateşin sıcaklığının odanın altından geçip bütün odayı ısıttığı düzenek; Kore\'nin geleneksel ısıtma yöntemi. Ansiklopediye göre evde ayakkabıyı çıkarıp yere oturma ve uzanma alışkanlığının başlıca sebebi de bu.' },
+  { t: 'steps', photo: 'ondol_agungi', pos: '50% 76%', kicker: 'Nasıl çalışır?', title: 'Ateşten yere', items: ['Ocakta (<b>agungi</b>) ateş yakılır; aynı ateşle yemek de pişer', 'Sıcak hava yerin altındaki kanallardan (<b>gorae</b>) geçer ve üstteki taşları (<b>gudeuljang</b>) ısıtır', 'Isınan yer, odanın havasını da ısıtır; duman bacadan çıkar'] },
+  { t: 'text', kicker: 'Bugün', title: 'Ateş yok, sıcak su var', body: 'Ansiklopediye göre zamanla yakıt, kömür briketinden (<b>yeontan</b>) gaza, petrole ve elektriğe geçti. Yerin altına kanal yerine <b>sıcak su boruları</b> ya da elektrik panelleri döşendi; ocak ortadan kalktı.<br><br>Yani evler bugün de yerden ısınıyor.' },
+  { t: 'num', kicker: 'Ulusal miras', num: '2018', unit: 'ulusal somut olmayan miras', body: 'Kore, ondol kültürünü 2018\'de ulusal miras listesine aldı. Gerekçe: sert kışlara akıllıca uyum sağlayan Korelilerin yaratıcılığı. Belirli bir ustası yok; çünkü bütün Kore\'de paylaşılan bir yaşam kültürü sayıldı.' },
+  { t: 'end', ko: '온돌', rom: 'ondol', mean: 'Odayı yerin altından ısıtan düzenek; Kore\'nin geleneksel ısıtma yöntemi.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“ondol”) · Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Ondol munhwa”) · Kore Resmî Gazetesi, sayı 19252 (2018-05-09)' },
+];
 const NAMES = { A: ['Kore Notları', '@kore.notlari'], B: ['Kore\'de Neden?', '@korede.neden'], C: ['Kore\'de Neden?', '@korede.neden'] };
