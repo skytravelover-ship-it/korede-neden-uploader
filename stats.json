@@ -2,12 +2,17 @@
   "01-hitap": {
     "likes": 0,
     "comments": 0,
-    "insights_error": "GET 18378695938241057/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"AYxx44F5y0hVw5T3oCn7yAs\"}}"
+    "insights_error": "GET 18378695938241057/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"Al6706L-6iTB543h-7PH87a\"}}"
   },
-  "_fetched_at": "2026-11-06T16:04:59+00:00",
+  "_fetched_at": "2026-11-07T07:40:14+00:00",
   "03-kimjang": {
     "likes": 0,
     "comments": 0,
-    "insights_error": "GET 18194158933405405/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"A-QXhKXImeosHDgvxJyzvO3\"}}"
+    "insights_error": "GET 18194158933405405/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"A0OzXJi8vq2PGJLumPIqZUL\"}}"
+  },
+  "04-suneung": {
+    "likes": 0,
+    "comments": 0,
+    "insights_error": "GET 18474413584138863/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"AQCqrZSNJyDvDs3VW1gUruK\"}}"
   }
 }
