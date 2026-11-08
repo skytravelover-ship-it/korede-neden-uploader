@@ -136,6 +136,15 @@
       "reviewed": false,
       "title": "온돌 (바닥 난방)",
       "category": "gunluk"
+    },
+    {
+      "id": "16-copluk",
+      "type": "carousel",
+      "src": "studio/carousels/16-copluk",
+      "day": null,
+      "reviewed": false,
+      "title": "쓰레기 종량제 (종량제 봉투)",
+      "category": "gunluk"
     }
   ]
 }

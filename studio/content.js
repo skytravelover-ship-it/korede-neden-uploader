@@ -130,4 +130,16 @@ POSTS.od = [
   { t: 'num', kicker: 'Ulusal miras', num: '2018', unit: 'ulusal somut olmayan miras', body: 'Kore, ondol kültürünü 2018\'de ulusal miras listesine aldı. Gerekçe: sert kışlara akıllıca uyum sağlayan Korelilerin yaratıcılığı. Belirli bir ustası yok; çünkü bütün Kore\'de paylaşılan bir yaşam kültürü sayıldı.' },
   { t: 'end', ko: '온돌', rom: 'ondol', mean: 'Odayı yerin altından ısıtan düzenek; Kore\'nin geleneksel ısıtma yöntemi.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“ondol”) · Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Ondol munhwa”) · Kore Resmî Gazetesi, sayı 19252 (2018-05-09)' },
 ];
+// 9주차: 쓰레기 종량제 (2026-11-08 작성, 컨펌 대기)
+POSTS.jr = [
+  { t: 'cover', photo: 'cop_seoul', pos: '50% 88%', kicker: 'Günlük hayat', q: 'Kore\'de çöp atmak için neden torba satın alınır?', dek: 'Çünkü çöpün ücreti torbanın içinde.' },
+  { t: 'text', kicker: 'Jongnyangje', title: 'Attığın kadar ödersin', body: 'Kore\'de ev çöpü, ilçenin <b>standart çöp torbasına</b> konur. Torbanın parası, çöpün toplanıp işlenmesinin ücretidir. Çok çöp atan çok torba alır, çok öder.<br><br>Bu düzen <b>1 Ocak 1995</b>\'ten beri bütün ülkede uygulanıyor. Amaç: daha az çöp, daha çok geri dönüşüm.' },
+  { t: 'trio', kicker: 'Çöp üçe ayrılır', title: 'Hangisi nereye?', rows: [
+    ['종량제 봉투', 'jongnyangje bongtu', 'Genel çöp', 'Satın alınan torbaya konur'],
+    ['음식물 쓰레기', 'eumsingmul sseuregi', 'Yemek artığı', 'Suyu süzülüp ayrı atılır'],
+    ['재활용품', 'jaehwaryongpum', 'Geri dönüşüm', 'Şeffaf poşete konur ya da bağlanır']] },
+  { t: 'num', kicker: 'Bir örnek', num: '490', unit: 'won · 20 litrelik torba', body: 'Seul\'ün Jung-gu ilçesinde 20 litrelik genel çöp torbasının fiyatı (ilçe belediyesinin sitesi). Torba ve fiyat ilçeden ilçeye değişir. Torbalar süpermarketlerde ve <b>pyeonuijeom</b> denen küçük marketlerde satılır.' },
+  { t: 'steps', kicker: 'Seul, Jung-gu', title: 'Ne zaman, nereye?', items: ['Konut bölgelerinde çöp akşam <b>19:00 ile 24:00</b> arasında çıkarılır', 'Torba evin ya da dükkânın önüne bırakılır; cadde kenarına değil', 'Saatinden önce ya da yanlış yere bırakana <b>100 bin – 300 bin won</b> para cezası', 'Gün ve saat ilçeden ilçeye değişir'] },
+  { t: 'end', ko: '종량제', rom: 'jongnyangje', mean: 'Ağırlığa, uzunluğa ya da hacme göre vergi veya ücret alınan düzen.', src: 'Kaynak: Kore Ulusal Arşivi, Politika Tarihi (“Çöp ücreti jongnyangje”) · Seul Jung-gu Belediyesi, çöp çıkarma rehberi · İncheon Büyükşehir Belediyesi, yabancılar için rehber · Standart Kore Dili Sözlüğü (“jongnyangje”)' },
+];
 const NAMES = { A: ['Kore Notları', '@kore.notlari'], B: ['Kore\'de Neden?', '@korede.neden'], C: ['Kore\'de Neden?', '@korede.neden'] };

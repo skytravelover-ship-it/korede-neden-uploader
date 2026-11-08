@@ -86,3 +86,4 @@
 | sugo_metro | Pexels | wal_ 172619 | https://www.pexels.com/photo/commuters-in-seoul-metro-subway-carriage-36621878/ |
 | ondol_room | Pexels | Little forest 작은 숲 | https://www.pexels.com/photo/traditional-korean-interior-with-ornate-screens-31990882/ |
 | ondol_agungi | Pexels | Jakob Jin | https://www.pexels.com/photo/pots-on-vintage-stove-15376793/ |
+| cop_seoul | Pexels | Alexander London | https://www.pexels.com/photo/street-scene-in-seoul-with-urban-life-elements-29562562/ |
