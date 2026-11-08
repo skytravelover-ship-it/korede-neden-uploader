@@ -142,4 +142,16 @@ POSTS.jr = [
   { t: 'steps', kicker: 'Seul, Jung-gu', title: 'Ne zaman, nereye?', items: ['Konut bölgelerinde çöp akşam <b>19:00 ile 24:00</b> arasında çıkarılır', 'Torba evin ya da dükkânın önüne bırakılır; cadde kenarına değil', 'Saatinden önce ya da yanlış yere bırakana <b>100 bin – 300 bin won</b> para cezası', 'Gün ve saat ilçeden ilçeye değişir'] },
   { t: 'end', ko: '종량제', rom: 'jongnyangje', mean: 'Ağırlığa, uzunluğa ya da hacme göre vergi veya ücret alınan düzen.', src: 'Kaynak: Kore Ulusal Arşivi, Politika Tarihi (“Çöp ücreti jongnyangje”) · Seul Jung-gu Belediyesi, çöp çıkarma rehberi · İncheon Büyükşehir Belediyesi, yabancılar için rehber · Standart Kore Dili Sözlüğü (“jongnyangje”)' },
 ];
+// 10주차: 파이팅/화이팅 (2026-11-08 작성, 컨펌 대기)
+POSTS.pt = [
+  { t: 'cover', photo: 'fight_goyang', pos: '50% 50%', kicker: 'Dil', q: 'Kore\'de neden “hwaiting!” diye bağırılır?', dek: 'İngilizce “fighting” kelimesinden gelen bir tezahürat.' },
+  { t: 'text', kicker: 'Sözlükte', title: '“İyi mücadele edelim!”', body: 'Standart Kore Dili Sözlüğü\'ne göre <b>paiting</b> (파이팅), İngilizce <i>fighting</i> kelimesinden gelen bir ünlemdir.<br><br>Anlamı: spor karşılaşmasında oyuncuların birbirine “iyi mücadele edelim” diye bağırdığı söz. Ya da seyircinin oyunculara “iyi mücadele edin” diye bağırdığı söz.' },
+  { t: 'trio', kicker: 'Üç yazılış', title: 'Hangisi doğru?', rows: [
+    ['파이팅', 'paiting', 'Doğru yazım', 'Sözlükte ve kurallarda bu yazılış var'],
+    ['화이팅', 'hwaiting', 'Yanlış yazım', 'Kurala uymayan yazılış'],
+    ['홧팅', 'hwatting', 'Kısaltma', '“Hwaiting”in kısaltılmış hâli']] },
+  { t: 'steps', kicker: 'Neden “p”?', title: 'Korecede “f” harfi yok', items: ['Kore alfabesinde “f” sesi için ayrı bir harf yoktur', 'Yabancı kelime yazım kuralına göre ünlüden önceki f, <b>p</b> harfiyle yazılır', 'Bu yüzden “file” <b>pail</b> (파일), “fry pan” <b>peuraipaen</b> (프라이팬) olur', 'Kore Dili Enstitüsü 2000 ve 2004 raporlarında “hwaiting”i yanlış yazım örneği olarak gösterdi; 2024\'te de doğrusunun 파이팅 olduğunu yazdı'] },
+  { t: 'text', kicker: 'Türkçede', title: 'Bizde: “Haydi!”', body: 'TDK\'ye göre <b>haydi</b>, “isteklendirmek, çabukluk belirtmek için kullanılan bir söz”. Korecede tribünden yükselen bu söz için İngilizceden gelen bir kelime kullanılır: <b>paiting</b>.' },
+  { t: 'end', ko: '파이팅', rom: 'paiting', kind: 'ünlem', mean: 'Spor karşılaşmasında “iyi mücadele edelim” ya da “iyi mücadele edin” diye bağırılan söz.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“paiting”) · Ulusal Kore Dili Enstitüsü, Çevrim İçi Ganada yanıtı (2024-11-22) · Enstitü duyuruları (2000-12-18, 2004-03-22) · TDK Güncel Türkçe Sözlük (“haydi”)' },
+];
 const NAMES = { A: ['Kore Notları', '@kore.notlari'], B: ['Kore\'de Neden?', '@korede.neden'], C: ['Kore\'de Neden?', '@korede.neden'] };

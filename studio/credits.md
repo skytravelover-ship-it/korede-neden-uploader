@@ -87,3 +87,4 @@
 | ondol_room | Pexels | Little forest 작은 숲 | https://www.pexels.com/photo/traditional-korean-interior-with-ornate-screens-31990882/ |
 | ondol_agungi | Pexels | Jakob Jin | https://www.pexels.com/photo/pots-on-vintage-stove-15376793/ |
 | cop_seoul | Pexels | Alexander London | https://www.pexels.com/photo/street-scene-in-seoul-with-urban-life-elements-29562562/ |
+| fight_goyang | Pexels | Warren Yip | https://www.pexels.com/photo/goyang-stadium-covered-in-snow-during-winter-33425622/ |

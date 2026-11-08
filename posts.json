@@ -145,6 +145,15 @@
       "reviewed": false,
       "title": "쓰레기 종량제 (종량제 봉투)",
       "category": "gunluk"
+    },
+    {
+      "id": "17-paiting",
+      "type": "carousel",
+      "src": "studio/carousels/17-paiting",
+      "day": null,
+      "reviewed": false,
+      "title": "파이팅 (화이팅은 틀린 표기)",
+      "category": "dil"
     }
   ]
 }
