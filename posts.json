@@ -154,6 +154,19 @@
       "reviewed": false,
       "title": "파이팅 (화이팅은 틀린 표기)",
       "category": "dil"
+    },
+    {
+      "id": "18-jeya",
+      "type": "carousel",
+      "src": "studio/carousels/18-jeya",
+      "day": null,
+      "reviewed": false,
+      "title": "제야의 종 (보신각 33번 타종)",
+      "category": "gelenek",
+      "season": {
+        "from": "12-26",
+        "to": "12-31"
+      }
     }
   ]
 }

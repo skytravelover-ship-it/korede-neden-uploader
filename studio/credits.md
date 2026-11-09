@@ -88,3 +88,5 @@
 | ondol_agungi | Pexels | Jakob Jin | https://www.pexels.com/photo/pots-on-vintage-stove-15376793/ |
 | cop_seoul | Pexels | Alexander London | https://www.pexels.com/photo/street-scene-in-seoul-with-urban-life-elements-29562562/ |
 | fight_goyang | Pexels | Warren Yip | https://www.pexels.com/photo/goyang-stadium-covered-in-snow-during-winter-33425622/ |
+| jeya_bosingak | Pexels | Junsu Park | https://www.pexels.com/photo/bosingak-pavilion-in-seoul-18321054/ |
+| jeya_gate | Pexels | BUY Camera | https://www.pexels.com/photo/namdaemun-gate-in-seoul-with-traffic-and-cityscape-36391306/ (제목은 Namdaemun이나 옹성·성곽으로 보아 흥인지문 [추정], 슬라이드에서 문 이름은 쓰지 않음) |
