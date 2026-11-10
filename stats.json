@@ -2,22 +2,22 @@
   "01-hitap": {
     "likes": 0,
     "comments": 0,
-    "insights_error": "GET 18378695938241057/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"AxkYhtmHVHt0ezlOFDWe9hp\"}}"
+    "insights_error": "GET 18378695938241057/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"Ap9fqCgVyvImNPZtyzREPvc\"}}"
   },
-  "_fetched_at": "2026-11-09T22:37:36+00:00",
+  "_fetched_at": "2026-11-10T12:53:16+00:00",
   "03-kimjang": {
     "likes": 0,
     "comments": 0,
-    "insights_error": "GET 18194158933405405/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"AmImdmg4-VpoNk7FvGF_PoW\"}}"
+    "insights_error": "GET 18194158933405405/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"AgY-nLSX0mqXHbgQiSUnezE\"}}"
   },
   "04-suneung": {
     "likes": 0,
     "comments": 0,
-    "insights_error": "GET 18474413584138863/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"ABFPNe58uiWqrvMENOYCg2W\"}}"
+    "insights_error": "GET 18474413584138863/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"AyuQnP837bu5e7fY6b4vJfg\"}}"
   },
   "06-bahsis": {
     "likes": 0,
     "comments": 0,
-    "insights_error": "GET 18146016352595809/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"AzA1ZBbj25J2wo41Q_ZjL_m\"}}"
+    "insights_error": "GET 18146016352595809/insights → 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"code\":10,\"type\":\"OAuthException\",\"fbtrace_id\":\"AtFIQEyyJc_EggWQgXG_KuR\"}}"
   }
 }
