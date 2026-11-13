@@ -167,6 +167,15 @@
         "from": "12-26",
         "to": "12-31"
       }
+    },
+    {
+      "id": "19-banchan",
+      "type": "carousel",
+      "src": "studio/carousels/19-banchan",
+      "day": null,
+      "reviewed": false,
+      "title": "반찬과 반상 (3첩~12첩)",
+      "category": "yemek"
     }
   ]
 }

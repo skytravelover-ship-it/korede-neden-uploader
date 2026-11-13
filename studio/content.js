@@ -163,4 +163,13 @@ POSTS.jy = [
   { t: 'text', kicker: 'Sayıların anlamı', title: '33 gök, 28 yıldız', body: 'Ansiklopediye göre bu sayılar Budizmle ilgili. Şafaktaki 33 vuruş, gökteki <b>33 göğe</b> seslenip o günün huzurunu dilemek içindi. Akşamki 28 vuruş ise gökteki <b>28 yıldız kümesine</b> seslenmek içindi.<br><br>Bugün de yılbaşı gecesi çan <b>33 kez</b> çalınıyor.' },
   { t: 'end', ko: '제야의 종', rom: 'jeyaui jong', kind: 'ifade', mean: 'Yılın son gecesi, gece yarısı çalınan çan. Seul\'de Bosingak\'ta 33 kez çalınır.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“jeya”) · Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Injeong”, “Paru”, “Bosingak teo”, “Jongnu”) · Seul Büyükşehir Belediyesi (2025-11-10 duyuru; 2025 tören sayfası)' },
 ];
+// 12주차: 반찬과 반상 (2026-11-13 작성, 컨펌 대기)
+POSTS.bs = [
+  { t: 'cover', photo: 'bansang_12', pos: '50% 50%', kicker: 'Sofra', q: 'Kore sofrasında neden bu kadar çok küçük tabak var?', dek: 'Hepsinin ortak bir adı var: banchan.' },
+  { t: 'text', photo: 'bansang_brass', pos: '50% 50%', kicker: 'Banchan', title: 'Pilavın yanındakiler', body: 'Sözlüğe göre <b>banchan</b>, “pilavla birlikte yenen yemeklerin genel adı”. Günlük sofrada (<b>bansang</b>) pilav ana yemektir; yanına banchan ve bir çorba ya da güveç gelir.' },
+  { t: 'num', kicker: 'Sayıyla', num: '3–12', unit: 'cheop', body: 'Sofra, banchan sayısıyla adlandırılır: 3 cheop, 5 cheop, 7 cheop… 12 cheop. <b>Cheop</b>, sofra takımındaki küçük banchan kaplarını sayan birimdir. Takımda pilav, çorba, kimchi ve soslar için ayrı kaplar vardır; banchan kapları ise 3 ile 12 arasıdır.' },
+  { t: 'steps', photo: 'bansang_jjigae', pos: '50% 45%', kicker: 'Sayı artınca', title: 'Sofraya ne eklenir?', items: ['<b>3 cheop</b>: çiğ sebze, pişmiş sebze ve bir ızgara ya da sosta pişmiş yemek', '<b>5 cheop</b>: tavada kızartılan <b>jeon</b> ve kuru banchan ya da tuzlu deniz ürünü (<b>jeotgal</b>) eklenir; çorbaya güveç de katılır', '<b>7 cheop</b>: bir ızgara ve çiğ balık ya da et (<b>hoe</b>) daha gelir'] },
+  { t: 'text', photo: 'bansang_tray', pos: '50% 60%', kicker: 'Sofrada yer', title: 'Pilav solda, çorba sağda', body: 'Ansiklopediye göre <b>pilav kasesi sola, çorba kasesi sağa</b> konur. Banchanlarda aynı pişirme yöntemi ve aynı malzeme tekrar edilmez.' },
+  { t: 'end', ko: '반찬', rom: 'banchan', mean: 'Pilavla birlikte yenen yemeklerin genel adı.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“banchan”, “cheop”) · Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Bansang”, “Bansanggi”)' },
+];
 const NAMES = { A: ['Kore Notları', '@kore.notlari'], B: ['Kore\'de Neden?', '@korede.neden'], C: ['Kore\'de Neden?', '@korede.neden'] };
