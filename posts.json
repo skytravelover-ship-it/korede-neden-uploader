@@ -176,6 +176,15 @@
       "reviewed": false,
       "title": "반찬과 반상 (3첩~12첩)",
       "category": "yemek"
+    },
+    {
+      "id": "20-doljabi",
+      "type": "carousel",
+      "src": "studio/carousels/20-doljabi",
+      "day": null,
+      "reviewed": false,
+      "category": "gelenek",
+      "title": "돌잡이 (첫돌·돌잔치)"
     }
   ]
 }

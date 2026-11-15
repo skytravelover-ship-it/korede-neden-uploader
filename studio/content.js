@@ -172,4 +172,16 @@ POSTS.bs = [
   { t: 'text', photo: 'bansang_tray', pos: '50% 60%', kicker: 'Sofrada yer', title: 'Pilav solda, çorba sağda', body: 'Ansiklopediye göre <b>pilav kasesi sola, çorba kasesi sağa</b> konur. Banchanlarda aynı pişirme yöntemi ve aynı malzeme tekrar edilmez.' },
   { t: 'end', ko: '반찬', rom: 'banchan', mean: 'Pilavla birlikte yenen yemeklerin genel adı.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“banchan”, “cheop”) · Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Bansang”, “Bansanggi”)' },
 ];
+// 13주차: 돌잔치와 돌잡이 (2026-11-15 작성, 컨펌 대기)
+POSTS.dl = [
+  { t: 'cover', photo: 'dol_cover', pos: '30% 50%', kicker: 'Gelenek', q: 'Kore\'de bebeğin ilk doğum gününde önüne neden para, kitap ve ip konur?', dek: 'Bebek birini tutar; ona göre geleceği tahmin edilir.' },
+  { t: 'text', photo: 'dol_hanbok', pos: '50% 12%', kicker: 'Dol', title: 'İlk doğum günü', body: 'Korecede <b>dol</b>, bebeğin doğduktan tam bir yıl sonra gelen ilk doğum günü. Bu gün <b>doljanchi</b> denen bir kutlama yapılır. Bebek renkli geleneksel kıyafetler giyer. Önüne tteok (pirinç keki), meyve ve uzun ömür dileğiyle erişte konan bir sofra kurulur.' },
+  { t: 'trio', kicker: 'Doljabi', title: 'Ne tutarsa…', rows: [
+    ['책 · 붓', 'chaek · but', 'Kitap, fırça', 'Çok okur, sınavı geçip devlet görevine girer'],
+    ['쌀 · 돈', 'ssal · don', 'Pirinç, para', 'Zengin olur'],
+    ['실 · 국수', 'sil · guksu', 'İp, erişte', 'Uzun yaşar']] },
+  { t: 'steps', photo: 'dol_rice', pos: '50% 60%', kicker: 'Nasıl?', title: 'İlk iki seçim', items: ['Eşyalar sofranın önüne, yere karışık bırakılır', 'Bebeğin <b>ilk ve ikinci</b> tuttuğu eşyaya bakılır', 'Aile, istediği eşyayı bebeğe yakın koyar. Ama bebek çoğu zaman başka bir şey tutar'] },
+  { t: 'text', photo: 'dol_tteok', pos: '50% 55%', kicker: 'Türkçede', title: 'Bizde: diş buğdayı', body: 'Dol günü komşulara tteok gönderilir. Kap boş geri dönmez; içine para, pirinç ya da ip konur.<br><br>TDK\'ye göre <b>diş buğdayı</b> da çocuk ilk dişini çıkardığında kaynatılıp yakınlara dağıtılan buğday.' },
+  { t: 'end', ko: '돌잡이', rom: 'doljabi', mean: 'İlk doğum gününde bebeğin önüne eşyalar koyup birini seçtirme. Seçtiği eşyaya göre geleceği tahmin edilir.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“doljabi”) · Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Dol”) · TDK Güncel Türkçe Sözlük (“diş buğdayı”)' },
+];
 const NAMES = { A: ['Kore Notları', '@kore.notlari'], B: ['Kore\'de Neden?', '@korede.neden'], C: ['Kore\'de Neden?', '@korede.neden'] };
