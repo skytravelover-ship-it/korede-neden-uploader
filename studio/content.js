@@ -184,4 +184,16 @@ POSTS.dl = [
   { t: 'text', photo: 'dol_tteok', pos: '50% 55%', kicker: 'Türkçede', title: 'Bizde: diş buğdayı', body: 'Dol günü komşulara tteok gönderilir. Kap boş geri dönmez; içine para, pirinç ya da ip konur.<br><br>TDK\'ye göre <b>diş buğdayı</b> da çocuk ilk dişini çıkardığında kaynatılıp yakınlara dağıtılan buğday.' },
   { t: 'end', ko: '돌잡이', rom: 'doljabi', mean: 'İlk doğum gününde bebeğin önüne eşyalar koyup birini seçtirme. Seçtiği eşyaya göre geleceği tahmin edilir.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“doljabi”) · Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Dol”) · TDK Güncel Türkçe Sözlük (“diş buğdayı”)' },
 ];
+// 14주차: 눈치 (2026-11-17 작성, 컨펌 대기)
+POSTS.nc = [
+  { t: 'cover', photo: 'nunchi_platform', pos: '50% 50%', kicker: 'Dil', q: 'Kore\'de biri size “nunchin yok” derse ne demek istiyor?', dek: 'Söylenmeyeni anlama becerisinin Korecede bir adı var.' },
+  { t: 'text', kicker: 'Sözlükte', title: 'Söylenmeden anlamak', body: 'Standart Kore Dili Sözlüğü\'ne göre <b>nunchi</b> (눈치), “başkasının aklından geçeni o anki durumdan çıkarıp anlama”.<br><br>Ulusal Kore Dili Enstitüsü\'nün Temel Korece Sözlüğü daha açık yazar: “karşındaki <b>söylemese de</b> onun ne düşündüğünü ve durumu anlama yeteneği”.' },
+  { t: 'trio', kicker: 'Günlük dilde', title: 'Nunchi ile kurulan sözler', rows: [
+    ['눈치가 빠르다', 'nunchiga ppareuda', 'Nunchisi hızlı', 'Başkasının aklından geçeni çabuk anlar'],
+    ['눈치가 없다', 'nunchiga eopda', 'Nunchisi yok', 'Söylenmeyeni anlamaz'],
+    ['눈치를 보다', 'nunchireul boda', 'Nunchiye bakmak', 'Başkasının ne düşündüğünü ve tavrını gözler']] },
+  { t: 'steps', kicker: 'Atasözlerinde', title: 'Ayak tabanı, dedektif, serçe', items: ['<b>“Nunchisi ayak tabanı”</b>: nunchisi çok zayıf ya da hiç olmayan biri için', '<b>“Nunchisi dedektif”</b>: söylenmeden her şeyi anlayan biri için', '<b>“Serçenin değirmeni bulması gibi”</b>: nunchisi çok hızlı biri için', '<b>“Kalabalık evin köpeği gibi”</b>: insanların hâlini iyi gözleyen, nunchisi hızlı biri için'] },
+  { t: 'text', kicker: 'Türkçede', title: 'Bizde: havayı koklamak', body: 'TDK\'ye göre <b>havayı koklamak</b>, “gelişmeleri veya ortamı anlamaya çalışmak”. <b>Sezmek</b> ise “açık bir kanıt olmaksızın, olmuş veya olacak bir şeyi anlamak”.<br><br>Korecede bu becerinin kendi adı var: <b>nunchi</b>. Standart Kore Dili Sözlüğü\'nde bu kelimeyle kurulan <b>5 deyim</b> ve <b>7 atasözü</b> yer alıyor.' },
+  { t: 'end', ko: '눈치', rom: 'nunchi', mean: 'Başkasının aklından geçeni o anki durumdan çıkarıp anlama.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“nunchi”) · Temel Korece Sözlük, Ulusal Kore Dili Enstitüsü (krdict.korean.go.kr: “nunchi”) · TDK Güncel Türkçe Sözlük (“havayı koklamak”, “sezmek”)' },
+];
 const NAMES = { A: ['Kore Notları', '@kore.notlari'], B: ['Kore\'de Neden?', '@korede.neden'], C: ['Kore\'de Neden?', '@korede.neden'] };

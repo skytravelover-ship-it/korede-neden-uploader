@@ -98,3 +98,4 @@
 | dol_hanbok | Pexels | An chi heung 안치흥 | https://www.pexels.com/photo/adorable-baby-in-traditional-korean-hanbok-28447574/ |
 | dol_rice | Pexels | Brian Phetmeuangmay | https://www.pexels.com/photo/a-bowl-with-rice-and-a-wooden-spoon-17424318/ (작가 남캘리포니아 기반, 미국 내 돌잔치로 보임 [추정]) |
 | dol_tteok | Pexels | Brian Phetmeuangmay | https://www.pexels.com/photo/mochi-on-plates-on-table-23355669/ (같은 작가, 돌상 위 떡) |
+| nunchi_platform | Pexels | Theodore Nguyen | https://www.pexels.com/photo/busy-seoul-subway-station-platform-scene-31768202/ (촬영지 Seoul, South Korea) |

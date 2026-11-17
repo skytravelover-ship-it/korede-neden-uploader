@@ -185,6 +185,15 @@
       "reviewed": false,
       "category": "gelenek",
       "title": "돌잡이 (첫돌·돌잔치)"
+    },
+    {
+      "id": "21-nunchi",
+      "type": "carousel",
+      "src": "studio/carousels/21-nunchi",
+      "day": null,
+      "reviewed": false,
+      "category": "dil",
+      "title": "눈치 (말하지 않아도 알아채기)"
     }
   ]
 }
