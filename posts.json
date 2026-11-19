@@ -194,6 +194,15 @@
       "reviewed": false,
       "category": "dil",
       "title": "눈치 (말하지 않아도 알아채기)"
+    },
+    {
+      "id": "22-jjimjilbang",
+      "type": "carousel",
+      "src": "studio/carousels/22-jjimjilbang",
+      "day": null,
+      "reviewed": false,
+      "category": "gunluk",
+      "title": "찜질방 (한증, 때밀이·때수건)"
     }
   ]
 }

@@ -196,4 +196,16 @@ POSTS.nc = [
   { t: 'text', kicker: 'Türkçede', title: 'Bizde: havayı koklamak', body: 'TDK\'ye göre <b>havayı koklamak</b>, “gelişmeleri veya ortamı anlamaya çalışmak”. <b>Sezmek</b> ise “açık bir kanıt olmaksızın, olmuş veya olacak bir şeyi anlamak”.<br><br>Korecede bu becerinin kendi adı var: <b>nunchi</b>. Standart Kore Dili Sözlüğü\'nde bu kelimeyle kurulan <b>5 deyim</b> ve <b>7 atasözü</b> yer alıyor.' },
   { t: 'end', ko: '눈치', rom: 'nunchi', mean: 'Başkasının aklından geçeni o anki durumdan çıkarıp anlama.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“nunchi”) · Temel Korece Sözlük, Ulusal Kore Dili Enstitüsü (krdict.korean.go.kr: “nunchi”) · TDK Güncel Türkçe Sözlük (“havayı koklamak”, “sezmek”)' },
 ];
+// 15주차: 찜질방 (2026-11-19 작성, 컨펌 대기)
+POSTS.jj = [
+  { t: 'cover', photo: 'jjim_hamam', pos: '50% 30%', kicker: 'Günlük hayat', q: 'Kore\'de hamam var mı?', dek: 'Var ama farklı: terlemek için su değil, sıcak hava kullanılır. Adı jjimjilbang.' },
+  { t: 'text', kicker: 'Sözlükte', title: 'Sıcak hava odası', body: 'Standart Kore Dili Sözlüğü\'ne göre <b>jjimjilbang</b> (찜질방), duvarları <b>sarı kil</b> (hwangto) ya da <b>maekbanseok</b> denen bir taşla sıvanmış, yüksek sıcaklıktaki havayla ter attıran bir yer. İçerideki hava <b>40–80 °C</b> tutulur; dinlenme alanları ve sauna da vardır.<br><br>Kore yasasına göre bu bir <b>hamam işletmesi</b>: kil, maekbanseok ya da yeşim taşı ısıtılır, çıkan sıcaklıkla müşteriye ter attırılır.' },
+  { t: 'trio', kicker: 'Üç kelime', title: 'Kore\'nin ter odaları', rows: [
+    ['찜질방', 'jjimjilbang', 'Bugün', 'Sıcak hava odaları, dinlenme alanı ve sauna bir arada'],
+    ['한증막', 'hanjeungmak', 'Geleneksel', 'Duvarla çevrili, mağara gibi bir yapı; altından ateş yakılır'],
+    ['때밀이', 'ttemiri', 'Hamamda', 'Para karşılığı müşterinin kirini ovarak çıkaran kişi']] },
+  { t: 'steps', kicker: 'Tarihte', title: 'Kral Sejong\'un ter evleri', items: ['<b>1422</b>: Kral Sejong, ter banyosunun hastalıkları iyileştirip iyileştirmediğini araştırttı', '<b>1428</b>: Başkentte ve kapıların dışında birer <b>ter evi</b> (hanjeungso) kuruldu; her birine iki hekim gönderildi', 'Yoksul hastalar burada tedavi edildi; masraf devletin kurduğu bir fondan karşılandı', 'Gelenek: odada çam dalı yakılır, ateş söndürülür, yere hasır serilir; 4–5 dakika terlenir, soğunur, tekrar girilir'] },
+  { t: 'text', photo: 'p7_kese', pos: '50% 60%', kicker: 'Türkçede', title: 'Bizde kese, Kore\'de “tte”', body: 'TDK\'ye göre <b>kese</b>, yıkanırken kir çıkarmak için vücudu ovmaya yarayan bez. Korecede kir <b>tte</b> (때), kese <b>ttesugeon</b> (때수건). Hamamdaki tellak gibi, Kore hamamında da para karşılığı kir ovan biri var: <b>ttemiri</b>.' },
+  { t: 'end', ko: '찜질방', rom: 'jjimjilbang', mean: 'Kil ya da taşla sıvanmış, sıcak havayla ter attıran yer; dinlenme alanı ve saunası olur.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“jjimjilbang”, “hanjeungmak”, “ttemiri”, “ttesugeon”) · Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Hanjeung”) · Kore Kamu Hijyeni Yönetimi Yasası, md. 2 · TDK Güncel Türkçe Sözlük (“kese”, “tellak”)' },
+];
 const NAMES = { A: ['Kore Notları', '@kore.notlari'], B: ['Kore\'de Neden?', '@korede.neden'], C: ['Kore\'de Neden?', '@korede.neden'] };
