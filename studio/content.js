@@ -208,4 +208,16 @@ POSTS.jj = [
   { t: 'text', photo: 'p7_kese', pos: '50% 60%', kicker: 'Türkçede', title: 'Bizde kese, Kore\'de “tte”', body: 'TDK\'ye göre <b>kese</b>, yıkanırken kir çıkarmak için vücudu ovmaya yarayan bez. Korecede kir <b>tte</b> (때), kese <b>ttesugeon</b> (때수건). Hamamdaki tellak gibi, Kore hamamında da para karşılığı kir ovan biri var: <b>ttemiri</b>.' },
   { t: 'end', ko: '찜질방', rom: 'jjimjilbang', mean: 'Kil ya da taşla sıvanmış, sıcak havayla ter attıran yer; dinlenme alanı ve saunası olur.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“jjimjilbang”, “hanjeungmak”, “ttemiri”, “ttesugeon”) · Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Hanjeung”) · Kore Kamu Hijyeni Yönetimi Yasası, md. 2 · TDK Güncel Türkçe Sözlük (“kese”, “tellak”)' },
 ];
+// 16주차: 붕어빵 (2026-11-21 작성, 컨펌 대기)
+POSTS.bb = [
+  { t: 'cover', photo: 'bung_stall', pos: '50% 45%', kicker: 'Sokak lezzeti', q: 'Kore\'nin “balık ekmeği”nde neden balık yok?', dek: 'Adı bungeoppang: bungeo bir tatlı su balığı, ppang ekmek. İçinde balık değil, tatlı kırmızı fasulye ezmesi var.' },
+  { t: 'text', photo: 'bung_window', pos: '50% 50%', kicker: 'Sözlükte', title: 'Balık kalıbında ekmek', body: 'Standart Kore Dili Sözlüğü\'ne göre <b>bungeoppang</b> (붕어빵), balık şeklindeki kalıba sulu un hamuru ve <b>patso</b> (haşlanıp ezilmiş kırmızı fasulye) konarak pişirilen bir <b>pulppang</b>: kalıpta pişirilen ve çoğunlukla sokakta satılan ekmek.<br><br>Kore Kültür Bakanlığı\'na göre Kore\'nin en sevilen <b>kış</b> sokak lezzetlerinden biri. Soğuklar başlayınca tezgâhlar caddelere çıkar.' },
+  { t: 'steps', photo: 'bung_ingeo', pos: '50% 55%', kicker: 'Aynı hamur, farklı kalıp', title: 'Kalıbın şekli, adını belirler', items: ['<b>Bungeoppang</b> (붕어빵): balık kalıbı', '<b>Ingeoppang</b> (잉어빵): sazan kalıbı. Adı farklı, hamur aynı', '<b>Gukhwappang</b> (국화빵): kasımpatı kalıbı', '<b>Hodugwaja</b> (호두과자): ceviz şeklinde. Cheonan şehrinin meşhuru'] },
+  { t: 'num', kicker: 'Tarihte', num: '1930', unit: '\'lu yıllar: kalıp Japonya\'dan geldi', body: 'Ansiklopediye göre bu ekmeklerin piştiği kalıp 1930\'larda Japonya\'dan geldi. 1940–50\'lerde önce Gyeongseong\'da (bugünkü Seul) ve birkaç büyük şehirde moda oldu.<br><br>1954\'te ABD\'den ucuz buğday gelmeye başlayınca un ucuzladı; 1960\'larda pulppang halkın atıştırmalığına dönüştü.' },
+  { t: 'trio', kicker: 'Bugün', title: 'Üç yeni kelime', rows: [
+    ['팥붕', 'patbung', 'Fasulyeli', 'Kırmızı fasulye ezmeli klasik. Pat (fasulye) + bung'],
+    ['슈붕', 'syubung', 'Kremalı', 'Krema dolgulu olanı. Syu (şu kreması) + bung'],
+    ['붕세권', 'bungsegwon', 'Tezgâha yakın', 'Yakınında bungeoppang tezgâhı olan yer. “Yeoksegwon” (istasyona yakın bölge) sözüne şaka']] },
+  { t: 'end', ko: '붕어빵', rom: 'bungeoppang', mean: 'Balık kalıbında, içi kırmızı fasulye ezmeli, sokakta satılan ekmek. Mecazda: yüzü birine çok benzeyen kişi.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“bungeoppang”, “pulppang”, “patso”, “gukhwappang”, “hodugwaja”, “yeoksegwon”) · Temel Korece Sözlük (krdict.korean.go.kr: “bungeoppang”) · Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Pulppang”) · Kore Kültür, Spor ve Turizm Bakanlığı (mcst.go.kr, 2024-12-26)' },
+];
 const NAMES = { A: ['Kore Notları', '@kore.notlari'], B: ['Kore\'de Neden?', '@korede.neden'], C: ['Kore\'de Neden?', '@korede.neden'] };

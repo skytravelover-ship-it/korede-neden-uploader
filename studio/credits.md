@@ -100,3 +100,6 @@
 | dol_tteok | Pexels | Brian Phetmeuangmay | https://www.pexels.com/photo/mochi-on-plates-on-table-23355669/ (같은 작가, 돌상 위 떡) |
 | nunchi_platform | Pexels | Theodore Nguyen | https://www.pexels.com/photo/busy-seoul-subway-station-platform-scene-31768202/ (촬영지 Seoul, South Korea) |
 | jjim_hamam | Pexels | Zak H | https://www.pexels.com/photo/intricate-ceiling-and-lantern-in-historical-turkish-bath-34380463/ (촬영지 Türkiye, 하맘 천장) |
+| bung_stall | Pexels | Artem Korolev | https://www.pexels.com/photo/fresh-korean-taiyaki-with-nutella-and-cream-cheese-filling-37319798/ (촬영지 Seoul, South Korea; 한글 '붕어빵' 안내문 보임) |
+| bung_window | Pexels | Huy Phan | https://www.pexels.com/photo/street-food-restaurant-19271567/ (촬영지 Seoul, South Korea; '따뜻한 아기 붕어빵' 안내문) |
+| bung_ingeo | Pexels | Theodore Nguyen | https://www.pexels.com/photo/street-food-vendor-in-seoul-selling-traditional-snacks-32014929/ (촬영지 Seoul; 노점 간판은 '잉어빵', 3장에서 잉어빵 항목과 함께 씀) |

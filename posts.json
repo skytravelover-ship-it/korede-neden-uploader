@@ -203,6 +203,15 @@
       "reviewed": false,
       "category": "gunluk",
       "title": "찜질방 (한증, 때밀이·때수건)"
+    },
+    {
+      "id": "23-bungeoppang",
+      "type": "carousel",
+      "src": "studio/carousels/23-bungeoppang",
+      "day": null,
+      "reviewed": false,
+      "category": "yemek",
+      "title": "붕어빵 (겨울 길거리 간식, 풀빵·팥붕·슈붕·붕세권)"
     }
   ]
 }
