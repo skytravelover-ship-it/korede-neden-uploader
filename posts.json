@@ -212,6 +212,15 @@
       "reviewed": false,
       "category": "yemek",
       "title": "붕어빵 (겨울 길거리 간식, 풀빵·팥붕·슈붕·붕세권)"
+    },
+    {
+      "id": "24-siwonhada",
+      "type": "carousel",
+      "src": "studio/carousels/24-siwonhada",
+      "day": null,
+      "reviewed": false,
+      "category": "dil",
+      "title": "시원하다 (뜨거운 국물이 왜 '시원'해?)"
     }
   ]
 }

@@ -103,3 +103,12 @@
 | bung_stall | Pexels | Artem Korolev | https://www.pexels.com/photo/fresh-korean-taiyaki-with-nutella-and-cream-cheese-filling-37319798/ (촬영지 Seoul, South Korea; 한글 '붕어빵' 안내문 보임) |
 | bung_window | Pexels | Huy Phan | https://www.pexels.com/photo/street-food-restaurant-19271567/ (촬영지 Seoul, South Korea; '따뜻한 아기 붕어빵' 안내문) |
 | bung_ingeo | Pexels | Theodore Nguyen | https://www.pexels.com/photo/street-food-vendor-in-seoul-selling-traditional-snacks-32014929/ (촬영지 Seoul; 노점 간판은 '잉어빵', 3장에서 잉어빵 항목과 함께 씀) |
+
+## 24-siwonhada (2026-11-23 추가)
+
+| 파일 | 출처 | 작가 | 원본 페이지 |
+|---|---|---|---|
+| siwon_stew | Pexels | makafood | https://www.pexels.com/photo/stew-with-beef-8952367/ |
+| siwon_table | Pexels | 세훈 예 (busan) | https://www.pexels.com/photo/a-korean-beef-soup-on-a-table-with-other-dishes-15876419/ |
+| siwon_bowl | Pexels | makafood | https://www.pexels.com/photo/soup-with-onion-leaks-in-a-black-bowl-8953853/ |
+| siwon_mercimek | Pexels | Meruyert Gonullu (İstanbul) | https://www.pexels.com/photo/a-person-squeezing-a-lemon-on-lentil-soup-7469395/ |

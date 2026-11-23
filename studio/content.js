@@ -220,4 +220,16 @@ POSTS.bb = [
     ['붕세권', 'bungsegwon', 'Tezgâha yakın', 'Yakınında bungeoppang tezgâhı olan yer. “Yeoksegwon” (istasyona yakın bölge) sözüne şaka']] },
   { t: 'end', ko: '붕어빵', rom: 'bungeoppang', mean: 'Balık kalıbında, içi kırmızı fasulye ezmeli, sokakta satılan ekmek. Mecazda: yüzü birine çok benzeyen kişi.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“bungeoppang”, “pulppang”, “patso”, “gukhwappang”, “hodugwaja”, “yeoksegwon”) · Temel Korece Sözlük (krdict.korean.go.kr: “bungeoppang”) · Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Pulppang”) · Kore Kültür, Spor ve Turizm Bakanlığı (mcst.go.kr, 2024-12-26)' },
 ];
+// 17주차: 시원하다 (2026-11-23 작성, 컨펌 대기)
+POSTS.sw = [
+  { t: 'cover', photo: 'siwon_stew', pos: '50% 55%', kicker: 'Dil', q: 'Koreliler kaynar çorbayı içerken neden “Ah, serin!” der?', dek: 'Kelime siwonhada: hem “serin” hem “içim ferahladı” demek.' },
+  { t: 'text', photo: 'siwon_table', pos: '50% 62%', kicker: 'Sözlükte', title: 'Bir kelime, iki sıcaklık', body: 'Standart Kore Dili Sözlüğü\'ne göre <b>siwonhada</b> önce “ne sıcak ne soğuk, kararında serin” demek. İkinci anlamı yemek için: “soğuk ve ferah <b>ya da</b> sıcak olup içi rahatlatan”. Sözlüğün örneği: kaynatılmış bir <b>bugeotguk</b>, kurutulmuş morina çorbası.' },
+  { t: 'trio', kicker: 'Günlük dilde', title: 'Sadece çorba için değil', rows: [
+    ['시원한 바람', 'siwonhan baram', 'Hava', 'Serin rüzgâr. Kelimenin ilk anlamı: ne sıcak ne soğuk'],
+    ['마음이 시원하다', 'maeumi siwonhada', 'Gönül', 'Sıkıntı dağıldı, gönül hafifledi'],
+    ['시원하게 긁다', 'siwonhage geukda', 'Kaşıntı', 'Sırtı “siwon” kaşımak: kaşıntı geçince söylenir']] },
+  { t: 'num', kicker: 'Sayıyla', num: '8', unit: 'anlam, tek kelime', body: 'Temel Korece Sözlük, siwonhada için <b>8 anlam</b> veriyor: serin hava, ferah yemek, açık manzara, dobra konuşma, temizlenmiş yer, tatmin edici sonuç, hafifleyen gönül, geçen kaşıntı.<br><br>Sözlük, sıcak çorba anlamını da gönül anlamını da aynı kelimeyle açıklıyor: <b>huryeonhada</b> (후련하다), “içi rahatlamak”. Huryeonhada\'nın tanımında ise yine “siwonhada” geçiyor.' },
+  { t: 'text', photo: 'siwon_mercimek', pos: '50% 50%', kicker: 'Türkçede', title: 'Bizde iki ayrı kelime', body: 'TDK\'ye göre <b>serin</b>, “az soğuk, ılık ile soğuk arası”; <b>ferahlamak</b>, “sıkıntısı, tasası dağılmak”. Korecede ikisi tek kelime: <b>siwonhada</b>. Kaynar çorbaya “siwonhada” demek, “içim ferahladı” demek.' },
+  { t: 'end', ko: '시원하다', rom: 'siwonhada', kind: 'sıfat', mean: 'Ne sıcak ne soğuk, kararında serin. Yemek için: soğuk ve ferah ya da sıcak olup içi rahatlatan.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“siwonhada”) · Temel Korece Sözlük, Ulusal Kore Dili Enstitüsü (krdict.korean.go.kr: “siwonhada”, “huryeonhada”) · TDK Güncel Türkçe Sözlük (“serin”, “ferahlamak”)' },
+];
 const NAMES = { A: ['Kore Notları', '@kore.notlari'], B: ['Kore\'de Neden?', '@korede.neden'], C: ['Kore\'de Neden?', '@korede.neden'] };
