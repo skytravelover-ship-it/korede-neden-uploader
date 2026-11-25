@@ -221,6 +221,15 @@
       "reviewed": false,
       "category": "dil",
       "title": "시원하다 (뜨거운 국물이 왜 '시원'해?)"
+    },
+    {
+      "id": "25-jeonse",
+      "type": "carousel",
+      "src": "studio/carousels/25-jeonse",
+      "day": null,
+      "reviewed": false,
+      "category": "gunluk",
+      "title": "전세 (월세 없이 보증금 맡기고 사는 집)"
     }
   ]
 }

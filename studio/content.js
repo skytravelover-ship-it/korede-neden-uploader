@@ -232,4 +232,16 @@ POSTS.sw = [
   { t: 'text', photo: 'siwon_mercimek', pos: '50% 50%', kicker: 'Türkçede', title: 'Bizde iki ayrı kelime', body: 'TDK\'ye göre <b>serin</b>, “az soğuk, ılık ile soğuk arası”; <b>ferahlamak</b>, “sıkıntısı, tasası dağılmak”. Korecede ikisi tek kelime: <b>siwonhada</b>. Kaynar çorbaya “siwonhada” demek, “içim ferahladı” demek.' },
   { t: 'end', ko: '시원하다', rom: 'siwonhada', kind: 'sıfat', mean: 'Ne sıcak ne soğuk, kararında serin. Yemek için: soğuk ve ferah ya da sıcak olup içi rahatlatan.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“siwonhada”) · Temel Korece Sözlük, Ulusal Kore Dili Enstitüsü (krdict.korean.go.kr: “siwonhada”, “huryeonhada”) · TDK Güncel Türkçe Sözlük (“serin”, “ferahlamak”)' },
 ];
+// 18주차: 전세 (2026-11-25 작성, 컨펌 대기)
+POSTS.jn = [
+  { t: 'cover', photo: 'jeonse_aerial', pos: '50% 50%', kicker: 'Günlük hayat', q: 'Kore\'de aylık kira ödemeden kiracı olunur mu?', dek: 'Olunur. Ev sahibine büyük bir para emanet edilir; evden çıkarken tamamı geri alınır. Adı jeonse.' },
+  { t: 'text', photo: 'jeonse_street', pos: '50% 60%', kicker: 'Sözlükte', title: 'Kira yok, emanet para var', body: 'Sözlüğe göre <b>jeonse</b> (전세), bir taşınmazın sahibine belli bir para emanet edip orayı belli bir süre kullanmak. Çıkarken paranın <b>tamamı</b> geri alınır. Ansiklopediye göre aylık kira ödenmez; <b>wolse</b>\'den (aylık kira) farkı budur.' },
+  { t: 'trio', kicker: 'Üç kelime', title: 'Kore\'de ev tutmak', rows: [
+    ['전세', 'jeonse', 'Toplu para', 'Para emanet edilir, aylık kira ödenmez'],
+    ['월세', 'wolse', 'Aylık kira', 'Evi ya da odayı aydan aya kiralamak'],
+    ['전세금', 'jeonsegeum', 'Emanet para', 'Jeonse\'de ev sahibine bırakılan para']] },
+  { t: 'steps', kicker: 'Neden var?', title: 'İki tarafın da işine geldi', items: ['<b>Ev sahibi</b>: ev almak için eksik kalan parayı faizsiz bulur', '<b>Kiracı</b>: evin yaklaşık yarı fiyatını emanet eder, o evde oturur', 'Ansiklopediye göre bu düzen, konut kredileri yaygınlaşmadan önce ortaya çıktı', 'Kore Savaşı ve sanayileşme yıllarında şehirlerde ev bulmak zorlaştı; jeonse o dönemde iyice yerleşti'] },
+  { t: 'num', kicker: 'Sayıyla', num: '2', unit: 'yıl: yasaya göre sözleşme süresi', body: 'Kore\'nin Konut Kiralama Koruma Yasası\'na göre süre yazılmamış ya da 2 yıldan kısa yazılmış bir sözleşme <b>2 yıllık</b> sayılır.<br><br>Nüfus sayımına göre jeonse ile oturan hanelerin oranı 1975\'te <b>%17,3</b>, 1995\'te <b>%29,7</b>, 2010\'da <b>%21,7</b> idi. Ansiklopediye göre jeonse azalıyor: ev sahipleri artık her ay gelir getiren aylık kirayı tercih ediyor.' },
+  { t: 'end', ko: '전세', rom: 'jeonse', mean: 'Ev sahibine belli bir para emanet edip evi belli bir süre kullanmak. Çıkarken paranın tamamı geri alınır.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“jeonse”, “wolse”, “jeonsegeum”) · Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Jeonse”) · Kore Konut Kiralama Koruma Yasası, md. 4 (law.go.kr)' },
+];
 const NAMES = { A: ['Kore Notları', '@kore.notlari'], B: ['Kore\'de Neden?', '@korede.neden'], C: ['Kore\'de Neden?', '@korede.neden'] };

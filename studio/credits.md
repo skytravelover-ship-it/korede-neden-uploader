@@ -112,3 +112,5 @@
 | siwon_table | Pexels | 세훈 예 (busan) | https://www.pexels.com/photo/a-korean-beef-soup-on-a-table-with-other-dishes-15876419/ |
 | siwon_bowl | Pexels | makafood | https://www.pexels.com/photo/soup-with-onion-leaks-in-a-black-bowl-8953853/ |
 | siwon_mercimek | Pexels | Meruyert Gonullu (İstanbul) | https://www.pexels.com/photo/a-person-squeezing-a-lemon-on-lentil-soup-7469395/ |
+| jeonse_aerial | Pexels | Jakob Jin (Seoul) | https://www.pexels.com/photo/aerial-photography-of-apartment-buildings-in-korea-14452238/ |
+| jeonse_street | Pexels | Yena Kwon (Seoul) | https://www.pexels.com/photo/narrow-street-with-cars-parked-beside-concrete-buildings-11851265/ |
