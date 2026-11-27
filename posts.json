@@ -230,6 +230,15 @@
       "reviewed": false,
       "category": "gunluk",
       "title": "전세 (월세 없이 보증금 맡기고 사는 집)"
+    },
+    {
+      "id": "26-jipdeuri",
+      "type": "carousel",
+      "src": "studio/carousels/26-jipdeuri",
+      "day": null,
+      "reviewed": false,
+      "category": "gelenek",
+      "title": "집들이 (새집 초대, 세제·휴지 선물)"
     }
   ]
 }

@@ -114,3 +114,4 @@
 | siwon_mercimek | Pexels | Meruyert Gonullu (İstanbul) | https://www.pexels.com/photo/a-person-squeezing-a-lemon-on-lentil-soup-7469395/ |
 | jeonse_aerial | Pexels | Jakob Jin (Seoul) | https://www.pexels.com/photo/aerial-photography-of-apartment-buildings-in-korea-14452238/ |
 | jeonse_street | Pexels | Yena Kwon (Seoul) | https://www.pexels.com/photo/narrow-street-with-cars-parked-beside-concrete-buildings-11851265/ |
+| jip_apt | Pexels | Artem Korolev (Seoul) | https://www.pexels.com/photo/modern-seoul-apartment-buildings-with-autumn-foliage-40559532/ |

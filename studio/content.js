@@ -244,4 +244,16 @@ POSTS.jn = [
   { t: 'num', kicker: 'Sayıyla', num: '2', unit: 'yıl: yasaya göre sözleşme süresi', body: 'Kore\'nin Konut Kiralama Koruma Yasası\'na göre süre yazılmamış ya da 2 yıldan kısa yazılmış bir sözleşme <b>2 yıllık</b> sayılır.<br><br>Nüfus sayımına göre jeonse ile oturan hanelerin oranı 1975\'te <b>%17,3</b>, 1995\'te <b>%29,7</b>, 2010\'da <b>%21,7</b> idi. Ansiklopediye göre jeonse azalıyor: ev sahipleri artık her ay gelir getiren aylık kirayı tercih ediyor.' },
   { t: 'end', ko: '전세', rom: 'jeonse', mean: 'Ev sahibine belli bir para emanet edip evi belli bir süre kullanmak. Çıkarken paranın tamamı geri alınır.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“jeonse”, “wolse”, “jeonsegeum”) · Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Jeonse”) · Kore Konut Kiralama Koruma Yasası, md. 4 (law.go.kr)' },
 ];
+// 19주차: 집들이 (2026-11-27 작성, 컨펌 대기)
+POSTS.jd = [
+  { t: 'cover', photo: 'jip_apt', pos: '50% 40%', kicker: 'Gelenek', q: 'Kore\'de yeni eve giden misafir neden deterjan ve tuvalet kâğıdı götürür?', dek: 'Eskiden kibrit ve mum götürülürdü. Hediye değişti, dilek aynı kaldı: bu ev bolluk görsün.' },
+  { t: 'text', kicker: 'Sözlükte', title: 'Yeni evi gösterme sofrası', body: 'Standart Kore Dili Sözlüğü\'ne göre <b>jipdeuri</b> <span style="white-space:nowrap">(집들이)</span>, taşındıktan sonra komşuları ve yakınları çağırıp <b>evi gezdirmek ve yemek ikram etmek</b>. Kelimenin ilk anlamı ise yalnızca “taşınıp yeni eve girmek”. “Jip” ev demek.<br><br>Kore Kültürü Ansiklopedisi\'ne göre eskiden taşınma akşamı ev için bir tören yapılırdı. Zamanla kutlama öne çıktı; bugün o akşam komşular ve akrabalar çağrılır, büyük bir sofra kurulur.' },
+  { t: 'trio', kicker: 'Üç kelime', title: 'Çağıran ve giden', rows: [
+    ['집들이', 'jipdeuri', 'Ev sahibi', 'Yakınlarını çağırır, evi gezdirir, yemek ikram eder'],
+    ['집알이', 'jibari', 'Misafir', 'Yeni eve gider: hem evi görür hem selam verir'],
+    ['들턱', 'deulteok', 'İkram', 'Yeni eve girince ya da taşınınca verilen ikram']] },
+  { t: 'steps', kicker: 'Hediyeler', title: 'Ne götürülür, neden?', items: ['<b>Kibrit ve mum</b> (eskiden): evin talihi alev gibi yükselsin', '<b>Deterjan</b> (bugün): evin talihi köpük gibi kabarsın', '<b>Erişte</b> (Ongjin yöresinde): talih erişte gibi uzun sürsün', '<b>Tuvalet kâğıdı</b>: Halk Kültürü Ansiklopedisi\'ne göre deterjanla birlikte “arınma” anlamı taşır'] },
+  { t: 'text', kicker: 'Türkçede', title: 'Bizde: güle güle oturun', body: 'TDK\'ye göre <b>güle güle</b>, “üzüntüsüz bir hayat sürerek, gönül ferahlığı ile” anlamında bir iyi dilek sözü: güle güle otur, güle güle kullan. <b>Hayırlı olsun</b> da “güle güle kullan” anlamında söylenir.<br><br>Kore\'de aynı dilek hediyenin içinde: alev, köpük ve uzun erişte, yeni evin talihi için.' },
+  { t: 'end', ko: '집들이', rom: 'jipdeuri', mean: 'Taşındıktan sonra komşuları ve yakınları çağırıp evi gezdirmek ve yemek ikram etmek.', src: 'Kaynak: Standart Kore Dili Sözlüğü (“jipdeuri”, “jibari”, “deulteok”) · Kore Kültürü Ansiklopedisi (encykorea.aks.ac.kr: “Jipdeuri”) · Kore Halk Kültürü Ansiklopedisi, Kore Ulusal Halk Müzesi (folkency.nfm.go.kr: “Jipdeuri”) · TDK Güncel Türkçe Sözlük (“güle güle”, “hayırlı olsun”)' },
+];
 const NAMES = { A: ['Kore Notları', '@kore.notlari'], B: ['Kore\'de Neden?', '@korede.neden'], C: ['Kore\'de Neden?', '@korede.neden'] };
